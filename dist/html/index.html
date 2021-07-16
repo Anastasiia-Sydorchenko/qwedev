@@ -1,23 +1,2001 @@
-
 <!DOCTYPE html>
 <html>
+
 <head>
-	<meta charset="utf-8">
-	<!-- <base href="/"> -->
-	<title>gulp-simple</title>
-	<meta name="description" content="">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-	<link rel="icon" href="">
-	<link rel="stylesheet" href="../css/main.min.css">
+  <meta charset="utf-8">
+  <title>Qwedr</title>
+  <meta name="description" content="Qwedr">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preload" href="../fonts/roboto/Roboto-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="../fonts/roboto/Roboto-Regular.woff" as="font" type="font/woff" crossorigin>
+  <link rel="preload" href="../fonts/roboto/Roboto-Medium.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="../fonts/roboto/Roboto-Medium.woff" as="font" type="font/woff" crossorigin>
+  <link rel="preload" href="../fonts/roboto/Roboto-Bold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="../fonts/roboto/Roboto-Bold.woff" as="font" type="font/woff" crossorigin>
+  <link async rel="stylesheet" href="../css/main.min.css" as="style">
 </head>
 
 <body>
+  <header class="header">
+    <div class="header-top">
+      <div class="header-top-inner container">
 
-<div>
+        <div class="header-top__burger-menu-container">
+          <div class="header-top__burger-menu">
+            <span class="header-top__burger-menu-lines"></span>
+          </div>
 
-</div>
+          <nav class="header-top__burger-menu-nav">
+            <ul class="burger-menu__list">
 
-<script src="../js/script.min.js"></script>
+              <li class="burger-menu__list-item">
+                <div class="burger-menu__list-item-icon">
+                  <svg class="burger-menu__list-svg" width="29" height="20" viewBox="0 0 29 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="8" cy="10" r="8" fill="url(#paint0_linear)" />
+                    <circle cx="19" cy="10" r="10" fill="url(#paint1_linear)" />
+                    <defs>
+                      <linearGradient id="paint0_linear" x1="24" y1="10" x2="8" y2="-6" gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#2D2DE5" />
+                        <stop offset="1" stop-color="#AFAFFF" />
+                      </linearGradient>
+                      <linearGradient id="paint1_linear" x1="38.967" y1="9.96705" x2="19.033" y2="-9.96705"
+                        gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#4C969C" />
+                        <stop offset="1" stop-color="#BD82C6" />
+                      </linearGradient>
+                    </defs>
+                  </svg>
+                </div>
+                <a class="burger-menu__list-item-info" href="#">
+                  <span class="burger-menu__list-item-name">QWEDR</span>
+                  <span class="burger-menu__list-item-descr">Новости про IT, технологии, игры</span>
+                </a>
+              </li>
 
+              <li class="burger-menu__list-item">
+                <div class="burger-menu__list-item-icon">
+                  <svg class="burger-menu__list-svg" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="24" height="24" rx="3" fill="#B0B0FF" />
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M5 7C5 5.89543 5.89543 5 7 5H12C15.866 5 19 8.13401 19 12V17C19 18.1046 18.1046 19 17 19H7C5.89543 19 5 18.1046 5 17V7Z"
+                      fill="white" stroke="black" stroke-width="2" />
+                  </svg>
+                </div>
+                <a class="burger-menu__list-item-info" href="#">
+                  <span class="burger-menu__list-item-name">Fileiinfo.QWEDR</span>
+                  <span class="burger-menu__list-item-descr">Расширения файлов</span>
+                </a>
+              </li>
+
+              <li class="burger-menu__list-item">
+                <div class="burger-menu__list-item-icon">
+                  <svg class="burger-menu__list-svg" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="24" height="24" rx="3" fill="#838DB1" />
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M15 5.5H5.25C4.8375 5.5 4.5 5.8375 4.5 6.25V16.75L7.5 13.75H15C15.4125 13.75 15.75 13.4125 15.75 13V6.25C15.75 5.8375 15.4125 5.5 15 5.5ZM14.25 7V12.25H6.8775L6 13.1275V7H14.25ZM17.25 8.5H18.75C19.1625 8.5 19.5 8.8375 19.5 9.25V20.5L16.5 17.5H8.25C7.8375 17.5 7.5 17.1625 7.5 16.75V15.25H17.25V8.5Z"
+                      fill="white" />
+                  </svg>
+                </div>
+                <a class="burger-menu__list-item-info" href="#">
+                  <span class="burger-menu__list-item-name">Forum.QWEDR</span>
+                  <span class="burger-menu__list-item-descr">Общение, вопросы/ответы</span>
+                </a>
+              </li>
+
+            </ul>
+          </nav>
+        </div>
+
+        <div class="header-top__logo">
+          <svg class="header-top__logo-img" width="29" height="20" viewBox="0 0 29 20" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <circle cx="8" cy="10" r="8" fill="url(#paint0_linear)" />
+            <circle cx="19" cy="10" r="10" fill="url(#paint1_linear)" />
+            <defs>
+              <linearGradient id="paint0_linear" x1="24" y1="10" x2="8" y2="-6" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#2D2DE5" />
+                <stop offset="1" stop-color="#AFAFFF" />
+              </linearGradient>
+              <linearGradient id="paint1_linear" x1="38.967" y1="9.96705" x2="19.033" y2="-9.96705"
+                gradientUnits="userSpaceOnUse">
+                <stop stop-color="#4C969C" />
+                <stop offset="1" stop-color="#BD82C6" />
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+
+        <div class="header-top__buttons">
+          <a class="header-top__btn" href="#">Войти</a>
+          <a class="header-top__btn" href="#">Подписаться</a>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="header-bottom">
+      <div class="header-bottom-inner container">
+        <nav class="header-bottom__menu">
+          <ul class="header-bottom__menu-list">
+            <li><a class="header-bottom__menu-list-item" href="#">Новости<svg class="to-down-btn" width="20" height="20" viewBox="0 0 20 20" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path d="M13.825 7.1582L10 10.9749L6.175 7.1582L5 8.3332L10 13.3332L15 8.3332L13.825 7.1582Z"
+                    fill="#222222" /></svg></a></li>
+
+            <li><a class="header-bottom__menu-list-item" href="#">
+                Статьи
+                <svg class="to-down-btn" width="20" height="20" viewBox="0 0 20 20" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path d="M13.825 7.1582L10 10.9749L6.175 7.1582L5 8.3332L10 13.3332L15 8.3332L13.825 7.1582Z"
+                    fill="#222222" />
+                </svg>
+              </a></li>
+
+            <li><a class="header-bottom__menu-list-item" href="#">
+                Игры
+                <svg class="to-down-btn" width="20" height="20" viewBox="0 0 20 20" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path d="M13.825 7.1582L10 10.9749L6.175 7.1582L5 8.3332L10 13.3332L15 8.3332L13.825 7.1582Z"
+                    fill="#222222" />
+                </svg>
+              </a></li>
+
+            <li><a class="header-bottom__menu-list-item" href="#">
+                Обзоры
+                <svg class="to-down-btn" width="20" height="20" viewBox="0 0 20 20" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path d="M13.825 7.1582L10 10.9749L6.175 7.1582L5 8.3332L10 13.3332L15 8.3332L13.825 7.1582Z"
+                    fill="#222222" />
+                </svg>
+              </a></li>
+
+            <li><a class="header-bottom__menu-list-item" href="#">Блоги</a></li>
+
+            <li><a class="header-bottom__menu-list-item" href="#">Каталог</a></li>
+          </ul>
+        </nav>
+
+        <a class="header-bottom__search" href="#">
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M11.71 11H12.5L17.49 16L16 17.49L11 12.5V11.71L10.73 11.43C9.59 12.41 8.11 13 6.5 13C2.91 13 0 10.09 0 6.5C0 2.91 2.91 0 6.5 0C10.09 0 13 2.91 13 6.5C13 8.11 12.41 9.59 11.43 10.73L11.71 11ZM2 6.5C2 8.99 4.01 11 6.5 11C8.99 11 11 8.99 11 6.5C11 4.01 8.99 2 6.5 2C4.01 2 2 4.01 2 6.5Z"
+              fill="#222222" />
+          </svg>
+        </a>
+
+        <a class="header-bottom__theme-switch" href="#">
+          <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="14" cy="14" r="14" fill="#222222" />
+            <path
+              d="M14 6.5C9.85833 6.5 6.5 9.85833 6.5 14C6.5 18.1417 9.85833 21.5 14 21.5C18.1417 21.5 21.5 18.1417 21.5 14C21.5 13.6167 21.4667 13.2333 21.4167 12.8667C20.6 14.0083 19.2667 14.75 17.75 14.75C15.2667 14.75 13.25 12.7333 13.25 10.25C13.25 8.74167 13.9917 7.4 15.1333 6.58333C14.7667 6.53333 14.3833 6.5 14 6.5Z"
+              fill="white" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <section class="top container">
+    <h2 class="section-heading">
+      Выбор редакции h2
+    </h2>
+    <div class="top__inner">
+      <a class="top-img-wrapper" href="#">
+        <img class="img" src="../images/top-content-img.png" alt="">
+      </a>
+
+      <div class="top-content">
+        <a href="#"><span class="news-category top-content__news-category">Новости Hardware</span></a>
+        <a class="news-title-link" href="#">
+          <h2 class="highlighted-news-heading">Историческое событие: Samsung выпустила в России смартфон на основе SoC
+            Snapdragon 865</h2>
+        </a>
+        <p class="top-content__text news-main-text">Компания Global Wireless Solutions провела любопытное исследование,
+          в рамках которого пользователям iPhone из США предлагалось ответить на некоторые вопросы, связанные с сетями
+          связи пятого!</p>
+        <div class="top__content__stats news-stats">
+          <span class="top-content__date news-stats__date">18 сентября, 10:49</span>
+          <span class="top-content__stats-dot news-stats__dot"></span>
+          <span class="top-content__views news-stats__date">12 452 просмотров</span>
+        </div>
+        <a class="top-content__btn main-btn" href="#">
+          Читать далее
+          <svg class="main-btn__arrow-to-right" width="13" height="13" viewBox="0 0 13 13" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M6.50002 0.166504L5.38377 1.28275L9.80127 5.70817H0.166687V7.2915H9.80127L5.38377 11.7169L6.50002 12.8332L12.8334 6.49984L6.50002 0.166504Z"
+              fill="black" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="top-news container">
+
+    <div class="top-news-item">
+      <a class="top-news__img-wrapper" href="#">
+        <img class="img" src="../images/news-1.png" alt="">
+      </a>
+
+      <div class="top-news-content">
+        <a class="news-category-link" href="#"><span class="top-news__category news-category">Новости Hardware</span></a>
+        <a class="news-title-link" href="#">
+          <h3 class="news-heading-s">Историческое событие: Samsung выпустила в России смартфон на
+            основе SoC Snapdragon 865</h3>
+        </a>
+        <p class="news-main-text">Компания Global Wireless Solutions провела любопытное
+          исследование, в рамках которого пользователям iPhone.</p>
+      </div>
+    </div>
+
+    <div class="top-news-item">
+      <a class="top-news__img-wrapper" href="#">
+        <img class="img" src="../images/news-2.png" alt="">
+      </a>
+
+      <div class="top-news-content">
+        <a href="#" class="news-category-link"><span class="top-news__category news-category">Новости Software</span></a>
+        <a href="#" class="news-title-link">
+          <h3 class="news-heading-s">Историческое событие: Samsung выпустила в России смартфон на
+          </h3>
+        </a>
+        <p class="news-main-text">Компания Global Wireless Solutions провела любопытное
+          исследование, в рамках которого пользователям iPhone.</p>
+      </div>
+    </div>
+
+    <div class="top-news-item">
+      <a class="top-news__img-wrapper" href="#">
+        <img class="img" src="../images/news-3.png" alt="">
+      </a>
+
+      <div class="top-news-content">
+        <a href="#" class="news-category-link"><span class="top-news__category news-category">Новости Hardware</span></a>
+        <a href="#" class="news-title-link">
+          <h3 class="news-heading-s">Историческое событие: Samsung выпустила</h3>
+        </a>
+        <p class="news-main-text">Компания Global Wireless Solutions провела любопытное
+          исследование, в рамках которого пользователям iPhone.</p>
+      </div>
+    </div>
+
+    <div class="top-news-item">
+      <a class="top-news__img-wrapper img-wrapper" href="#">
+        <img class="img" src="../images/news-4.png" alt="">
+      </a>
+
+      <div class="top-news-content">
+        <a href="#" class="news-category-link"><span class="top-news__category news-category">Новости Игр</span></a>
+        <a href="#" class="news-title-link">
+          <h3 class="news-heading-s">Историческое событие!</h3>
+        </a>
+        <p class="news-main-text">Компания Global Wireless Solutions провела любопытное
+          исследование, в рамках которого пользователям iPhone.</p>
+      </div>
+    </div>
+
+  </section>
+
+  <section class="news-blocks container">
+    <section class="main-news-block">
+
+      <div class="latest-news__tabs">
+        <div class="latest-news__container">
+          <div role="tablist" class="latest-news__tabs-control">
+            <button data-tab="1" role="tab" aria-selected="true" aria-controls="tab-1"
+              class="tabs__tab tabs__tab--current">Последние записи</button>
+            <button data-tab="2" role="tab" aria-selected="false" aria-controls="tab-2" class="tabs__tab"
+              tabindex="-1">Популярные записи</button>
+            <button data-tab="3" role="tab" aria-selected="false" aria-controls="tab-3"
+              class="tabs__tab tabs__tab--pale" tabindex="-1">Обсуждаемое</button>
+          </div>
+
+          <button class="latest-news__tabs-hide-btn">[ Свернуть ]</button>
+        </div>
+
+        <div class="latest-news__contents">
+          <div data-tab-content="1" role="tabpanel" tabindex="0" id="tab-1"
+            class="latest-news__tabs-content latest-news__tabs-content--current">
+            <div class="latest-news__content-container">
+              <ul class="latest-news__tabs-inner">
+                <li class="latest-news__list-item"><a href="#"><span class="latest-news__time">10:49</span><span
+                      class="latest-news__title">Сэм Хьюстон одержал первую победу в чемпионате FCS</span></a></li>
+                <li class="latest-news__list-item"><a href="#"><span class="latest-news__time">10:49</span><span
+                      class="latest-news__title">Что произошло в футболе сегодня: 16 мая 2021 года</span></a></li>
+                <li class="latest-news__list-item"><a href="#"><span class="latest-news__time">10:49</span><span
+                      class="latest-news__title">"Барселона" выигрывает женскую Лигу чемпионов после победы над "Челси"
+                      4: 0</span></a></li>
+                <li class="latest-news__list-item"><a href="#"><span class="latest-news__time">10:49</span><span
+                      class="latest-news__title">Кайри Ирвинг из Nets присоединился к клубу 50-40-90, стал девятым
+                      игроком НБА, достиг …</span></a></li>
+                <li class="latest-news__list-item"><a href="#"><span class="latest-news__time">10:49</span><span
+                      class="latest-news__title">Сэм Хьюстон одержал первую победу в чемпионате FCS</span></a></li>
+                <li class="latest-news__list-item"><a href="#"><span class="latest-news__time">10:49</span><span
+                      class="latest-news__title">Что произошло в футболе сегодня: 16 мая 2021 года</span></a></li>
+                <li class="latest-news__list-item"><a href="#"><span class="latest-news__time">10:49</span><span
+                      class="latest-news__title">"Барселона" выигрывает женскую Лигу чемпионов после победы над "Челси"
+                      4:0</span></a></li>
+              </ul>
+
+              <a class="latest-news__show-more-btn" href="#">Показать еще
+                <svg class="arrow-to-down-2" width="13" height="13" viewBox="0 0 13 13" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M12.1667 6.49992L11.1679 5.50117L7.20834 9.45367L7.20834 0.833252L5.79167 0.833252L5.79167 9.45367L1.83209 5.50117L0.833339 6.49992L6.50001 12.1666L12.1667 6.49992Z"
+                    fill="#6464E8" />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <div data-tab-content="2" role="tabpanel" tabindex="0" id="tab-2" class="latest-news__tabs-content" hidden>
+            <div class="latest-news__content-container">
+              <ul class="latest-news__tabs-inner">
+                <li class="latest-news__list-item"><a href="#"><span class="latest-news__time">10:49</span><span
+                      class="latest-news__title">Сэм Хьюстон одержал первую победу в чемпионате FCS</span></a></li>
+                <li class="latest-news__list-item"><a href="#"><span class="latest-news__time">10:49</span><span
+                      class="latest-news__title">Что произошло в футболе сегодня: 16 мая 2021 года</span></a></li>
+                <li class="latest-news__list-item"><a href="#"><span class="latest-news__time">10:49</span><span
+                      class="latest-news__title">"Барселона" выигрывает женскую Лигу чемпионов после победы над "Челси"
+                      4: 0</span></a></li>
+                <li class="latest-news__list-item"><a href="#"><span class="latest-news__time">10:49</span><span
+                      class="latest-news__title">Кайри Ирвинг из Nets присоединился к клубу 50-40-90, стал девятым
+                      игроком НБА, достиг …</span></a></li>
+                <li class="latest-news__list-item"><a href="#"><span class="latest-news__time">10:49</span><span
+                      class="latest-news__title">Сэм Хьюстон одержал первую победу в чемпионате FCS</span></a></li>
+                <li class="latest-news__list-item"><a href="#"><span class="latest-news__time">10:49</span><span
+                      class="latest-news__title">Что произошло в футболе сегодня: 16 мая 2021 года</span></a></li>
+                <li class="latest-news__list-item"><a href="#"><span class="latest-news__time">10:49</span><span
+                      class="latest-news__title">"Барселона" выигрывает женскую Лигу чемпионов после победы над "Челси"
+                      4:0</span></a></li>
+              </ul>
+
+              <a class="latest-news__show-more-btn" href="#">Показать еще
+                <svg class="arrow-to-down-2" width="13" height="13" viewBox="0 0 13 13" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M12.1667 6.49992L11.1679 5.50117L7.20834 9.45367L7.20834 0.833252L5.79167 0.833252L5.79167 9.45367L1.83209 5.50117L0.833339 6.49992L6.50001 12.1666L12.1667 6.49992Z"
+                    fill="#6464E8" />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <div data-tab-content="3" role="tabpanel" tabindex="0" id="tab-3" class="latest-news__tabs-content" hidden>
+            <div class="latest-news__content-container">
+              <ul class="latest-news__tabs-inner">
+                <li class="latest-news__list-item"><a href="#"><span class="latest-news__time">10:49</span><span
+                      class="latest-news__title">Сэм Хьюстон одержал первую победу в чемпионате FCS</span></a></li>
+                <li class="latest-news__list-item"><a href="#"><span class="latest-news__time">10:49</span><span
+                      class="latest-news__title">Что произошло в футболе сегодня: 16 мая 2021 года</span></a></li>
+                <li class="latest-news__list-item"><a href="#"><span class="latest-news__time">10:49</span><span
+                      class="latest-news__title">"Барселона" выигрывает женскую Лигу чемпионов после победы над "Челси"
+                      4: 0</span></a></li>
+                <li class="latest-news__list-item"><a href="#"><span class="latest-news__time">10:49</span><span
+                      class="latest-news__title">Кайри Ирвинг из Nets присоединился к клубу 50-40-90, стал девятым
+                      игроком НБА, достиг …</span></a></li>
+                <li class="latest-news__list-item"><a href="#"><span class="latest-news__time">10:49</span><span
+                      class="latest-news__title">Сэм Хьюстон одержал первую победу в чемпионате FCS</span></a></li>
+                <li class="latest-news__list-item"><a href="#"><span class="latest-news__time">10:49</span><span
+                      class="latest-news__title">Что произошло в футболе сегодня: 16 мая 2021 года</span></a></li>
+                <li class="latest-news__list-item"><a href="#"><span class="latest-news__time">10:49</span><span
+                      class="latest-news__title">"Барселона" выигрывает женскую Лигу чемпионов после победы над "Челси"
+                      4:0</span></a></li>
+              </ul>
+
+              <a class="latest-news__show-more-btn" href="#">Показать еще
+                <svg class="arrow-to-down-2" width="13" height="13" viewBox="0 0 13 13" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M12.1667 6.49992L11.1679 5.50117L7.20834 9.45367L7.20834 0.833252L5.79167 0.833252L5.79167 9.45367L1.83209 5.50117L0.833339 6.49992L6.50001 12.1666L12.1667 6.49992Z"
+                    fill="#6464E8" />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="all-news">
+        <h2 class="section-heading">Все Новости h2</h2>
+      </div>
+
+      <div class="all-news__block">
+
+        <div class="all-news__item">
+          <a class="all-news__img-wrapper" href="#">
+            <img class="img" src="../images/all-news-1.png" alt="">
+          </a>
+
+          <div class="all-news__content">
+            <a href="#" class="news-category-link"><span class="news-category">Новости Hardware</span></a>
+            <a href="#" class="news-title-link">
+              <h2 class="news-heading-m">Рецензия на политический сериал The Comey Rule / «Правило Коми» в роли кто кого
+              </h2>
+            </a>
+            <p class="news-main-text">Компания Global Wireless Solutions провела любопытное исследование, в рамках
+              которого пользователям iPhone из США предлагалось ответить на некоторые вопросы, связанные с сетями связи
+              пятого.</p>
+            <div class="news-stats">
+              <span class="all-news__date news-stats__date">18 сентября, 10:49</span>
+              <span class="all-news__stats-dot news-stats__dot"></span>
+              <span class="all-news__views news-stats__date">12 452 просмотров</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="all-news__item">
+          <a class="all-news__img-wrapper" href="#">
+            <img class="img" src="../images/all-news-2.png" alt="">
+          </a>
+
+          <div class="all-news__content">
+            <a href="#" class="news-category-link"><span class="news-category">Новости Hardware</span></a>
+            <a href="#" class="news-title-link">
+              <h2 class="news-heading-m">Сэм Хьюстон одержал первую победу в чемпионат</h2>
+            </a>
+            <p class="news-main-text">Компания Global Wireless Solutions провела любопытное исследование, в рамках
+              которого пользователям iPhone из США предлагалось ответить на некоторые вопросы, связанные с сетями связи
+              пятого.</p>
+            <div class="top__content__stats news-stats">
+              <span class="all-news__date news-stats__date">18 сентября, 10:49</span>
+              <span class="all-news__stats-dot news-stats__dot"></span>
+              <span class="all-news__views news-stats__date">12 452 просмотров</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="all-news__item">
+          <a class="all-news__img-wrapper" href="#">
+            <img class="img" src="../images/all-news-3.png" alt="">
+          </a>
+
+          <div class="all-news__content">
+            <a href="#" class="news-category-link"><span class="news-category">Новости Игр</span></a>
+            <a href="#" class="news-title-link">
+              <h2 class="news-heading-m">Рецензия на политический сериал The Comey Rule / «Правило Коми» в роли кто кого
+              </h2>
+            </a>
+            <p class="news-main-text">Компания Global Wireless Solutions провела любопытное исследование, в рамках
+              которого пользователям iPhone из США предлагалось ответить на некоторые вопросы, связанные с сетями связи
+              пятого.</p>
+            <div class="top__content__stats news-stats">
+              <span class="all-news__date news-stats__date">18 сентября, 10:49</span>
+              <span class="all-news__stats-dot news-stats__dot"></span>
+              <span class="all-news__views news-stats__date">12 452 просмотров</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="all-news__item">
+          <a class="all-news__img-wrapper">
+            <img class="img" src="../images/all-news-4.png" alt="">
+          </a>
+
+          <div class="all-news__content">
+            <a href="#" class="news-category-link"><span class="news-category">Новости Hardware</span></a>
+            <a href="#" class="news-title-link">
+              <h2 class="news-heading-m">Сэм Хьюстон одержал первую победу в чемпионат</h2>
+            </a>
+            <p class="news-main-text">Компания Global Wireless Solutions провела любопытное исследование, в рамках
+              которого пользователям iPhone из США предлагалось ответить на некоторые вопросы, связанные с сетями связи
+              пятого.</p>
+            <div class="top__content__stats news-stats">
+              <span class="all-news__date news-stats__date">18 сентября, 10:49</span>
+              <span class="all-news__stats-dot news-stats__dot"></span>
+              <span class="all-news__views news-stats__date">12 452 просмотров</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="all-news__item">
+          <a class="all-news__img-wrapper">
+            <img class="img" src="../images/all-news-5.png" alt="">
+          </a>
+
+          <div class="all-news__content">
+            <a href="#" class="news-category-link"><span class="news-category">Новости Hardware</span></a>
+            <a href="#" class="news-title-link">
+              <h2 class="news-heading-m">Рецензия на политический сериал The Comey Rule / «Правило Коми» в роли кто кого
+              </h2>
+            </a>
+            <p class="news-main-text">Компания Global Wireless Solutions провела любопытное исследование, в рамках
+              которого пользователям iPhone из США предлагалось ответить на некоторые вопросы, связанные с сетями связи
+              пятого.</p>
+            <div class="top__content__stats news-stats">
+              <span class="all-news__date news-stats__date">18 сентября, 10:49</span>
+              <span class="all-news__stats-dot news-stats__dot"></span>
+              <span class="all-news__views news-stats__date">12 452 просмотров</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="all-news__item">
+          <a class="all-news__img-wrapper">
+            <img class="img" src="../images/all-news-6.png" alt="">
+          </a>
+
+          <div class="all-news__content">
+            <a href="#" class="news-category-link"><span class="all-news__category news-category">Новости
+                Hardware</span></a>
+            <a href="#" class="news-title-link">
+              <h2 class="all__news-heading news-heading-m">Сэм Хьюстон одержал первую победу в чемпионат</h2>
+            </a>
+            <p class="news-main-text">Компания Global Wireless Solutions провела любопытное исследование, в рамках
+              которого пользователям iPhone из США предлагалось ответить на некоторые вопросы, связанные с сетями связи
+              пятого.</p>
+            <div class="top__content__stats news-stats">
+              <span class="all-news__date news-stats__date">18 сентября, 10:49</span>
+              <span class="all-news__stats-dot news-stats__dot"></span>
+              <span class="all-news__views news-stats__date">12 452 просмотров</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="all-news__item">
+          <a class="all-news__img-wrapper">
+            <img class="img" src="../images/all-news-7.png" alt="">
+          </a>
+
+          <div class="all-news__content">
+            <a href="#" class="news-category-link"><span class="all-news__category news-category">Новости
+                Hardware</span></a>
+            <a href="#" class="news-title-link">
+              <h2 class="all__news-heading news-heading-m">Сэм Хьюстон одержал первую победу в чемпионат</h2>
+            </a>
+            <p class="all-news__text news-main-text">Компания Global Wireless Solutions провела любопытное исследование,
+              в рамках которого пользователям iPhone из США предлагалось ответить на некоторые вопросы, связанные с
+              сетями связи пятого.</p>
+            <div class="top__content__stats news-stats">
+              <span class="all-news__date news-stats__date">18 сентября, 10:49</span>
+              <span class="all-news__stats-dot news-stats__dot"></span>
+              <span class="all-news__views news-stats__date">12 452 просмотров</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="all-news__item">
+          <a class="all-news__img-wrapper">
+            <img class="img" src="../images/all-news-8.png" alt="">
+          </a>
+
+          <div class="all-news__content">
+            <a href="#" class="news-category-link"><span class="all-news__category news-category">Новости
+                Hardware</span></a>
+            <a href="#" class="news-title-link">
+              <h2 class="all__news-heading news-heading-m">Сэм Хьюстон одержал первую победу в чемпионат</h2>
+            </a>
+            <p class="all-news__text news-main-text">Компания Global Wireless Solutions провела любопытное исследование,
+              в рамках которого пользователям iPhone из США предлагалось ответить на некоторые вопросы, связанные с
+              сетями связи пятого.</p>
+            <div class="top__content__stats news-stats">
+              <span class="all-news__date news-stats__date">18 сентября, 10:49</span>
+              <span class="all-news__stats-dot news-stats__dot"></span>
+              <span class="all-news__views news-stats__date">12 452 просмотров</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="all-news__item">
+          <a class="all-news__img-wrapper">
+            <img class="img" src="../images/all-news-9.png" alt="">
+          </a>
+
+          <div class="all-news__content">
+            <a href="#" class="news-category-link"><span class="all-news__category news-category">Новости
+                Hardware</span></a>
+            <a href="#" class="news-title-link">
+              <h2 class="all__news-heading news-heading-m">Сэм Хьюстон одержал первую победу в чемпионат</h2>
+            </a>
+            <p class="all-news__text news-main-text">Компания Global Wireless Solutions провела любопытное исследование,
+              в рамках которого пользователям iPhone из США предлагалось ответить на некоторые вопросы, связанные с
+              сетями связи пятого.</p>
+            <div class="top__content__stats news-stats">
+              <span class="all-news__date news-stats__date">18 сентября, 10:49</span>
+              <span class="all-news__stats-dot news-stats__dot"></span>
+              <span class="all-news__views news-stats__date">12 452 просмотров</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="popular-topic">
+        <span class="popular-topic__label">Популярная тема</span>
+        <a href="#" class="popular-topic-link">
+          <h2 class="popular-topic__heading">Новости Apple</h2>
+        </a>
+        <ul class="popular-topic__list">
+          <li class="popular-topic__list-item"><a class="popular-topic__list-item-link" href="#">Сэм Хьюстон одержал
+              первую победу в чемпионате FCS</a></li>
+          <li class="popular-topic__list-item"><a class="popular-topic__list-item-link" href="#">Что произошло в футболе
+              сегодня: 16 мая 2021 года</a></li>
+          <li class="popular-topic__list-item"><a class="popular-topic__list-item-link" href="#">"Барселона" выигрывает
+              женскую Лигу чемпионов после победы над "Челси" 4: 0</a></li>
+          <li class="popular-topic__list-item"><a class="popular-topic__list-item-link" href="#">Кайри Ирвинг из Nets
+              присоединился к клубу 50-40-90, стал девятым игроком НБА, достиг …</a></li>
+          <li class="popular-topic__list-item"><a class="popular-topic__list-item-link" href="#">Сэм Хьюстон одержал
+              первую победу в чемпионате FCS</a></li>
+          <li class="popular-topic__list-item"><a class="popular-topic__list-item-link" href="#">Что произошло в футболе
+              сегодня: 16 мая 2021 года</a></li>
+          <li class="popular-topic__list-item"><a class="popular-topic__list-item-link" href="#">"Барселона" выигрывает
+              женскую Лигу чемпионов после победы над "Челси" 4: 0</a></li>
+        </ul>
+        <a class="popular-topic__btn" href="#">Посмотреть все статьи по теме
+          <svg class="popular-topic__btn-arrow" width="13" height="13" viewBox="0 0 13 13" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M6.50002 0.166504L5.38377 1.28275L9.80127 5.70817H0.166687V7.2915H9.80127L5.38377 11.7169L6.50002 12.8332L12.8334 6.49984L6.50002 0.166504Z"
+              fill="black" />
+          </svg></a>
+      </div>
+
+    </section>
+
+    <aside class="sidebar-news-block">
+      <div class="popular-news">
+        <h2 class="section-heading">Популярные новости h2</h2>
+
+        <div class="popular-news__block">
+
+          <div class="popular-news__item">
+            <a class="popular-news__img-wrapper">
+              <img class="img" src="../images/popular-news-1.png" alt="">
+            </a>
+
+            <div class="popular-news__content">
+              <a href="#" class="news-title-link">
+                <h4 class="news-heading-xs">Историческое событие: Samsung выпустила в России смартфон на
+                  основе SoC Snapdragon 865</h4>
+              </a>
+              <span class="news-stats">14 Сентября</span>
+            </div>
+          </div>
+
+          <div class="popular-news__item">
+            <a class="popular-news__img-wrapper" href="#">
+              <img class="img" src="../images/popular-news-2.png" alt="">
+            </a>
+
+            <div class="popular-news__content">
+              <a href="#" class="news-title-link">
+                <h4 class="news-heading-xs">Историческое событие: Samsung выпустила в России смартфон на основе</h4>
+              </a>
+              <span class="news-stats">13 Сентября</span>
+            </div>
+          </div>
+
+          <div class="popular-news__item">
+            <a class="popular-news__img-wrapper" href="" #>
+              <img class="img" src="../images/popular-news-3.png" alt="">
+            </a>
+
+            <div class="popular-news__content">
+              <a href="#" class="news-title-link">
+                <h4 class="news-heading-xs">Историческое событие: Samsung выпустила</h4>
+              </a>
+              <span class="news-stats">10 Сентября</span>
+            </div>
+          </div>
+
+          <div class="popular-news__item">
+            <a class="popular-news__img-wrapper" href="#">
+              <img class="img" src="../images/popular-news-4.png" alt="">
+            </a>
+
+            <div class="popular-news__content">
+              <a href="#" class="news-title-link">
+                <h4 class="news-heading-xs">Историческое событие: Samsung выпустила в России смартфон на основе</h4>
+              </a>
+              <span class="news-stats">16 Сентября</span>
+            </div>
+          </div>
+
+          <div class="popular-news__item">
+            <a class="popular-news__img-wrapper" href="#">
+              <img class="img" src="../images/popular-news-5.png" alt="">
+            </a>
+
+            <div class="popular-news__content">
+              <a href="#" class="news-title-link">
+                <h4 class="news-heading-xs">Историческое событие: Samsung выпустила</h4>
+              </a>
+              <span class="news-stats">19 Сентября</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="discuss-news">
+        <h2 class="section-heading">Сейчас обсуждают h2</h2>
+
+        <div class="discuss-news__wrapper">
+          <div class="discuss-news__comment-block">
+
+            <div class="discuss-news__user">
+              <a class="discuss-news__user-img-wrapper" href="#">
+                <img class="img" src="../images/user-1.png" alt="">
+              </a>
+              <a class="user-name-link" href="#"><span class="discuss-news__user-name">Платон Щукин</span></a>
+              <span class="news-stats">10 октября, 15:30</span>
+            </div>
+
+            <p class="main-news-text">При помощи профессионального фотоаппарата можно снять очень даже краси фотографи!
+            </p>
+
+          </div>
+
+          <div class="discuss-news__comment-block">
+
+            <div class="discuss-news__user">
+              <a class="discuss-news__user-img-wrapper" href="#">
+                <img class="img" src="../images/user-2.png" alt="">
+              </a>
+              <a class="user-name-link" href="#"><span class="discuss-news__user-name">Платон Мегакиллеровы</span></a>
+              <span class="news-stats">10 октября, 15:30</span>
+            </div>
+
+            <p class="main-news-text">При помощи профессионального фотоаппарата можно снять очень даже красивую
+              фотографию
+              Луны. Но чтобы на снимке можно было увидеть мельчайшие детали вроде кратеров и други</p>
+
+          </div>
+
+          <div class="discuss-news__comment-block">
+
+            <div class="discuss-news__user">
+              <a class="discuss-news__user-img-wrapper" href="#">
+                <img class="img" src="../images/user-3.png" alt="">
+              </a>
+              <a class="user-name-link" href="#"><span class="discuss-news__user-name">Платон Щукин</span></a>
+              <span class="news-stats">10 октября, 15:30</span>
+            </div>
+
+            <p class="main-news-text">При помощи профессионального фотоаппарата можно снять очень даже краси фотографи!
+            </p>
+            <a class="discuss-source-link" href="#"><span class="discuss-news__source">Рецензия на политический
+                сериал!</span></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="popular-topics">
+        <h2 class="section-heading">Популярные темы h2</h2>
+        <div class="popular-topics__block">
+          <a class="popular-topics__item" href="#">iOS 13</a>
+          <a class="popular-topics__item" href="#">MWC 2021</a>
+          <a class="popular-topics__item" href="#">iOS 15</a>
+          <a class="popular-topics__item" href="#">AirPods 3</a>
+          <a class="popular-topics__item" href="#">Iphone 13</a>
+          <a class="popular-topics__item" href="#">Apple M2 Chip Long Text Title</a>
+          <a class="popular-topics__item" href="#">QW</a>
+          <a class="popular-topics__item" href="#">AirPods 2</a>
+        </div>
+      </div>
+
+      <div class="subcsribe">
+        <h2 class="section-heading">Подписаться на рассылку h2</h2>
+        <div class="subcsribe__block">
+          <span class="subcsribe__frequency">Раз в неделю, без спама</span>
+          <span class="subcsribe__call-on">Подпишитесь на нашу рассылку и будьте в курсе самых интересных
+            новостей.</span>
+          <form action="#" class="subcsribe__form">
+            <input class="subcsribe__email-field" type="email" name="email" placeholder="Ваш E-mail">
+            <button class="subcsribe__email-btn" type="submit">
+              <svg class="subcsribe__email-btn-icon" width="22" height="19" viewBox="0 0 22 19" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M0.083313 7.41667L0.0937297 0.125L21.9583 9.5L0.0937297 18.875L0.083313 11.5833L15.7083 9.5L0.083313 7.41667ZM2.17706 3.28125L9.99998 6.63542L2.16665 5.59375L2.17706 3.28125ZM9.98956 12.3646L2.16665 15.7188V13.4062L9.98956 12.3646Z"
+                  fill="#999999" />
+              </svg>
+            </button>
+          </form>
+        </div>
+      </div>
+    </aside>
+  </section>
+
+  <section class="news-with-pagination container">
+    <div class="news-with-pagination__news-block">
+      <div class="news-with-pagination__news-item">
+
+        <a class="news-with-pagination__img-wrapper" href="#">
+          <img class="img" src="../images/news-with-pagination-1.png" alt="">
+          <div class="news-with-pagination__img-wrapper-gradient"></div>
+          <div class="news-with-pagination__category">
+            <span class="news-with-pagination__category-icon"></span>
+            <span class="news-with-pagination__category-name">Новости Hardware</span>
+          </div>
+        </a>
+
+        <div class="news-with-pagination__content">
+          <a class="news-title-link" href="#"></a>
+          <h2 class="news-heading-m">Рецензия на политический сериал The Comey Rule / «Правило Коми» в
+            роли кто кого</h2>
+          <p class="news-main-text">Компания Global Wireless Solutions провела любопытное исследование, в рамках
+            которого пользователям iPhone из США предлагось ответит …</p>
+          <div class="news-stats news-with-pagination__stats">
+            <span>18 сентября, 10:49</span>
+            <span class="news-stats__dot"></span>
+            <span>12 452 просмотров</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="news-with-pagination__news-item">
+
+        <a class="news-with-pagination__img-wrapper" href="#">
+          <img class="img" src="../images/news-with-pagination-2.png" alt="">
+          <div class="news-with-pagination__img-wrapper-gradient"></div>
+          <div class="news-with-pagination__category">
+            <span class="news-with-pagination__category-icon"></span>
+            <span class="news-with-pagination__category-name">Новости Hardware</span>
+          </div>
+        </a>
+
+        <div class="news-with-pagination__content">
+          <a class="news-title-link" href="#">
+            <h2 class="news-heading-m">Рецензия на политический сериал The Comey Rule</h2>
+          </a>
+          <p class="news-main-text">Компания Global Wireless Solutions провела любопытное исследование, в рамках
+            которого пользователям iPhone из США предлагось ответит …</p>
+          <div class="news-stats news-with-pagination__stats">
+            <span>18 сентября, 10:49</span>
+            <span class="news-stats__dot"></span>
+            <span>12 452 просмотров</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="news-with-pagination__news-item">
+
+        <a class="news-with-pagination__img-wrapper" href="#">
+          <img class="img" src="../images/news-with-pagination-3.png" alt="">
+          <div class="news-with-pagination__img-wrapper-gradient"></div>
+          <div class="news-with-pagination__category">
+            <span class="news-with-pagination__category-icon"></span>
+            <span class="news-with-pagination__category-name">Новости Hardware</span>
+          </div>
+        </a>
+
+        <div class="news-with-pagination__content">
+          <a class="news-title-link" href="#">
+            <h2 class="news-heading-m">Рецензия на политический сериал The Comey Rule / «Правило Коми» в
+              роли кто кого</h2>
+          </a>
+          <p class="news-main-text">Компания Global Wireless Solutions провела любопытное исследование, в рамках
+            которого пользователям iPhone из США предлагось ответит …</p>
+          <div class="news-stats news-with-pagination__stats">
+            <span>18 сентября, 10:49</span>
+            <span class="news-stats__dot"></span>
+            <span>12 452 просмотров</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="news-with-pagination__news-item">
+
+        <a class="news-with-pagination__img-wrapper" href="#">
+          <img class="img" src="../images/news-with-pagination-4.png" alt="">
+          <div class="news-with-pagination__img-wrapper-gradient"></div>
+          <div class="news-with-pagination__category">
+            <span class="news-with-pagination__category-icon"></span>
+            <span class="news-with-pagination__category-name">Новости Hardware</span>
+          </div>
+        </a>
+
+        <div class="news-with-pagination__content">
+          <a class="news-title-link" href="#">
+            <h2 class="news-heading-m">Рецензия на политический сериал The Comey Rule / «Правило Коми» в
+              роли кто кого</h2>
+          </a>
+          <p class="news-main-text">Компания Global Wireless Solutions провела любопытное исследование, в рамках
+            которого пользователям iPhone из США предлагось ответит …</p>
+          <div class="news-stats news-with-pagination__stats">
+            <span>18 сентября, 10:49</span>
+            <span class="news-stats__dot"></span>
+            <span>12 452 просмотров</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="news-with-pagination__news-item">
+
+        <a class="news-with-pagination__img-wrapper" href="#">
+          <img class="img" src="../images/news-with-pagination-5.png" alt="">
+          <div class="news-with-pagination__img-wrapper-gradient"></div>
+          <div class="news-with-pagination__category">
+            <span class="news-with-pagination__category-icon"></span>
+            <span class="news-with-pagination__category-name">Новости Hardware</span>
+          </div>
+        </a>
+
+        <div class="news-with-pagination__content">
+          <a class="news-title-link" href="#">
+            <h2 class="news-heading-m">Рецензия на политический сериал The Comey Rule / «Правило Коми» в
+              роли кто кого</h2>
+          </a>
+          <p class="news-main-text">Компания Global Wireless Solutions провела любопытное исследование, в рамках
+            которого пользователям iPhone из США предлагось ответит …</p>
+          <div class="news-stats news-with-pagination__stats">
+            <span>18 сентября, 10:49</span>
+            <span class="news-stats__dot"></span>
+            <span>12 452 просмотров</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="news-with-pagination__news-item">
+
+        <a class="news-with-pagination__img-wrapper" href="#">
+          <img class="img" src="../images/news-with-pagination-6.png" alt="">
+          <div class="news-with-pagination__img-wrapper-gradient"></div>
+          <div class="news-with-pagination__category">
+            <span class="news-with-pagination__category-icon"></span>
+            <span class="news-with-pagination__category-name">Новости Hardware</span>
+          </div>
+        </a>
+
+        <div class="news-with-pagination__content">
+          <a class="news-title-link" href="#">
+            <h2 class="news-heading-m">Рецензия на политический сериал The Comey Rule</h2>
+          </a>
+          <p class="news-main-text">Компания Global Wireless Solutions провела любопытное исследование, в рамках
+            которого пользователям iPhone из США предлагось ответит …</p>
+          <div class="news-stats news-with-pagination__stats">
+            <span>18 сентября, 10:49</span>
+            <span class="news-stats__dot"></span>
+            <span>12 452 просмотров</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="news-with-pagination__pagination-block">
+      <a href="#" class="news-with-pagination__btn news-with-pagination__btn-prev">
+        <svg class="pagination__to-left-arrow" width="8" height="12" viewBox="0 0 8 12" fill="none"
+          xmlns="http://www.w3.org/2000/svg">
+          <path d="M8 10.59L3.42 6L8 1.41L6.59 0L0.59 6L6.59 12L8 10.59Z" fill="#999999" />
+        </svg>
+        Предыдущая
+      </a>
+
+      <div class="news-with-pagination__pages">
+        <a class="news-with-pagination__pages-num news-with-pagination__btn news-with-pagination__pages-num--current"
+          href="#">1</a>
+        <a class="news-with-pagination__pages-num news-with-pagination__btn" href="#">2</a>
+        <a class="news-with-pagination__pages-num news-with-pagination__btn" href="#">3</a>
+        <a class="news-with-pagination__pages-num news-with-pagination__btn" href="#">4</a>
+        <a class="news-with-pagination__pages-num news-with-pagination__btn" href="#">5</a>
+        <a class="news-with-pagination__pages-num news-with-pagination__btn" href="#">6</a>
+        <a class="news-with-pagination__pages-num news-with-pagination__btn" href="#">7</a>
+        <a class="news-with-pagination__pages-num news-with-pagination__btn" href="#">8</a>
+        <a class="news-with-pagination__pages-num news-with-pagination__btn" href="#">9</a>
+        <span class="news-with-pagination__pages-more">...</span>
+        <a class="news-with-pagination__pages-num news-with-pagination__btn" href="#">487</a>
+      </div>
+
+      <a href="#" class="news-with-pagination__btn news-with-pagination__btn-next">
+        Следующая
+        <svg class="pagination__to-right-arrow" width="8" height="12" viewBox="0 0 8 12" fill="none"
+          xmlns="http://www.w3.org/2000/svg">
+          <path d="M0.590027 10.59L5.17003 6L0.590027 1.41L2.00003 0L8.00003 6L2.00003 12L0.590027 10.59Z"
+            fill="#999999" />
+        </svg>
+      </a>
+    </div>
+  </section>
+
+  <section class="news-categories-block container">
+    <div class="news-category-type">
+      <div class="news-category__top">
+        <h2 class="section-heading">Новости Hardware h2</h2>
+        <a class="news-category__all" href="#">Все новости категории</a>
+      </div>
+
+      <div class="news-category__items">
+        <div class="news-category__item">
+          <a class="news-category__item-img-wrapper" href="#">
+            <img class="img" src="../images/hardware-news-1.png" alt="">
+          </a>
+          <a class="news-category-link" href="#"><span class="news-category__item-subcategory">Процессоры</span></a>
+          <a class="news-title-link" href="#"><span class="news-category__item-title">Как экономить воду. Курс РБК и
+              «Осоки Высокой» — урок 6</span></a>
+        </div>
+
+        <div class="news-category__item">
+          <a class="news-category__item-img-wrapper" href="#">
+            <img class="img" src="../images/hardware-news-2.png" alt="">
+          </a>
+          <a class="news-category-link" href="#"><span class="news-category__item-subcategory">Видеокарты</span></a>
+          <a class="news-title-link" href="#"><span class="news-category__item-title">MediaTek подвергает угрозу
+              лидирующие позиции Qualcomm в смартфонах и
+              планшетах</span></a>
+        </div>
+
+        <div class="news-category__item">
+          <a class="news-category__item-img-wrapper" href="#">
+            <img class="img" src="../images/hardware-news-3.png" alt="">
+          </a>
+          <a class="news-category-link" href="#"><span class="news-category__item-subcategory">Оперативная
+              память</span></a>
+          <a class="news-title-link" href="#"><span class="news-category__item-title">CES 2014: инновационные технологии
+              от компании MediaTek</span></a>
+        </div>
+
+        <div class="news-category__item">
+          <a class="news-category__item-img-wrapper" href="#">
+            <img class="img" src="../images/hardware-news-4.png" alt="">
+          </a>
+          <a class="news-category-link" href="#"><span class="news-category__item-subcategory">Системы
+              охлаждения</span></a>
+          <a class="news-title-link" href="#"><span class="news-category__item-title">Общественности представлено новое
+              поколение жидкостных систем
+              охлаждения от компании QuantaCool</span></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="news-category-type">
+      <div class="news-category__top">
+        <h2 class="section-heading">Новости Software h2</h2>
+        <a class="news-category__all" href="#">Все новости категории</a>
+      </div>
+
+      <div class="news-category__items">
+
+        <div class="news-category__item">
+          <a class="news-category__item-img-wrapper" href="#">
+            <img class="img" src="../images/software-news-1.png" alt="">
+          </a>
+          <a class="news-category-link" href="#"><span class="news-category__item-subcategory">Операционные
+              системы</span></a>
+          <a class="news-title-link" href="#"><span class="news-category__item-title">Какие есть причины популярности
+              немецких прокси</span></a>
+        </div>
+
+        <div class="news-category__item">
+          <a class="news-category__item-img-wrapper" href="#">
+            <img class="img" src="../images/software-news-2.png" alt="">
+          </a>
+          <a class="news-category-link" href="#"><span class="news-category__item-subcategory">Защита
+              информации</span></a>
+          <a class="news-title-link" href="#"><span class="news-category__item-title">Общественности представлено новое
+              поколение жидкостных систем охлаждения от компании QuantaCool</span></a>
+        </div>
+
+        <div class="news-category__item">
+          <a class="news-category__item-img-wrapper" href="#">
+            <img class="img" src="../images/software-news-3.png" alt="">
+          </a>
+          <a class="news-category-link" href="#"><span class="news-category__item-subcategory">Поисковые системы
+              системы</span></a>
+          <a class="news-title-link" href="#"><span class="news-category__item-title">CES 2014: инновационные технологии
+              от компании MediaTek</span></a>
+        </div>
+
+        <div class="news-category__item">
+          <a class="news-category__item-img-wrapper" href="#">
+            <img class="img" src="../images/software-news-4.png" alt="">
+          </a>
+          <a class="news-category-link" href="#"><span class="news-category__item-subcategory">Операционные
+              системы</span></a>
+          <a class="news-title-link" href="#"><span class="news-category__item-title">MediaTek подвергает угрозу
+              лидирующие позиции Qualcomm в смартфонах и планшетах</span></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="news-category-type">
+      <div class="news-category__top">
+        <h2 class="section-heading">Новости выставок h2</h2>
+        <a class="news-category__all" href="#">Все новости категории</a>
+      </div>
+
+      <div class="news-category__items">
+
+        <div class="news-category__item">
+          <a class="news-category__item-img-wrapper" href="#">
+            <img class="img" src="../images/exhibition-news-1.png" alt="">
+          </a>
+          <a class="news-category-link" href="#"><span class="news-category__item-subcategory">CES 2014</span></a>
+          <a class="news-title-link" href="#"><span class="news-category__item-title">iOS 9.3 - Night Shift</span></a>
+        </div>
+
+        <div class="news-category__item">
+          <a class="news-category__item-img-wrapper" href="#">
+            <img class="img" src="../images/exhibition-news-2.png" alt="">
+          </a>
+          <a class="news-category-link" href="#"><span class="news-category__item-subcategory">CES 2014</span></a>
+          <a class="news-title-link" href="#"><span class="news-category__item-title">Магазин Fred Perry. Что в нем
+              можно найти?</span></a>
+        </div>
+
+        <div class="news-category__item">
+          <a class="news-category__item-img-wrapper" href="#">
+            <img class="img" src="../images/exhibition-news-3.png" alt="">
+          </a>
+          <a class="news-category-link" href="#"><span class="news-category__item-subcategory">CES 2014</span></a>
+          <a class="news-title-link" href="#"><span class="news-category__item-title">Какие есть причины популярности
+              немецких прокси</span></a>
+        </div>
+
+        <div class="news-category__item">
+          <a class="news-category__item-img-wrapper" href="#">
+            <img class="img" src="../images/exhibition-news-4.png" alt="">
+          </a>
+          <a class="news-category-link" href="#"><span class="news-category__item-subcategory">CES 2014</span></a>
+          <a class="news-title-link" href="#"><span class="news-category__item-title">MWC 2014: Новый FordFocus с
+              функцией MyKey и мультимедийным центром SYNC2</span></a>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="news-category-type">
+      <div class="news-category__top">
+        <h2 class="section-heading">Новые обзоры h2</h2>
+        <a class="news-category__all" href="#">Все новости категории</a>
+      </div>
+
+      <div class="news-category__items">
+
+        <div class="news-category__item">
+          <a class="news-category__item-img-wrapper" href="#">
+            <img class="img" src="../images/reviews-news-1.png" alt="">
+          </a>
+          <a class="news-category-link" href="#"><span class="news-category__item-subcategory">CES 2014</span></a>
+          <a class="news-title-link" href="#"><span class="news-category__item-title">iOS 9.3 - Night Shift</span></a>
+        </div>
+
+        <div class="news-category__item">
+          <a class="news-category__item-img-wrapper" href="#">
+            <img class="img" src="../images/reviews-news-2.png" alt="">
+          </a>
+          <a class="news-category-link" href="#"><span class="news-category__item-subcategory">CES 2014</span></a>
+          <a class="news-title-link" href="#"><span class="news-category__item-title">Магазин Fred Perry. Что в нем
+              можно найти?</span></a>
+        </div>
+
+        <div class="news-category__item">
+          <a class="news-category__item-img-wrapper" href="#">
+            <img class="img" src="../images/reviews-news-3.png" alt="">
+          </a>
+          <a class="news-category-link" href="#"><span class="news-category__item-subcategory">CES 2014</span></a>
+          <a class="news-title-link" href="#"><span class="news-category__item-title">Какие есть причины популярности
+              немецких прокси</span></a>
+        </div>
+
+        <div class="news-category__item">
+          <a class="news-category__item-img-wrapper" href="#">
+            <img class="img" src="../images/reviews-news-4.png" alt="">
+          </a>
+          <a class="news-category-link" href="#"><span class="news-category__item-subcategory">CES 2014</span></a>
+          <a class="news-title-link" href="#"><span class="news-category__item-title">MWC 2014: Новый FordFocus с
+              функцией MyKey и мультимедийным центром SYNC2</span></a>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="news-category-type">
+      <div class="news-category__top">
+        <h2 class="section-heading">Новости видео h2</h2>
+        <a class="news-category__all" href="#">Все новости категории</a>
+      </div>
+
+      <div class="news-category__items">
+
+        <div class="news-category__item">
+          <a class="news-category__item-img-wrapper" href="#">
+            <img class="img" src="../images/new-videos-1.png" alt="">
+          </a>
+          <a class="news-category-link" href="#"><span class="news-category__item-subcategory">CES 2014</span></a>
+          <a class="news-title-link" href="#"><span class="news-category__item-title">iOS 9.3 - Night Shift</span></a>
+        </div>
+
+        <div class="news-category__item">
+          <a class="news-category__item-img-wrapper" href="#">
+            <img class="img" src="../images/new-videos-2.png" alt="">
+          </a>
+          <a class="news-category-link" href="#"><span class="news-category__item-subcategory">CES 2014</span></a>
+          <a class="news-title-link" href="#"><span class="news-category__item-title">Магазин Fred Perry. Что в нем
+              можно найти?</span></a>
+        </div>
+
+        <div class="news-category__item">
+          <a class="news-category__item-img-wrapper" href="#">
+            <img class="img" src="../images/new-videos-3.png" alt="">
+          </a>
+          <a class="news-category-link" href="#"><span class="news-category__item-subcategory">CES 2014</span></a>
+          <a class="news-title-link" href="#"><span class="news-category__item-title">Какие есть причины популярности
+              немецких прокси</span></a>
+        </div>
+
+        <div class="news-category__item">
+          <a class="news-category__item-img-wrapper" href="#">
+            <img class="img" src="../images/new-videos-4.png" alt="">
+          </a>
+          <a class="news-category-link" href="#"><span class="news-category__item-subcategory">CES 2014</span></a>
+          <a class="news-title-link" href="#"><span class="news-category__item-title">MWC 2014: Новый FordFocus с
+              функцией MyKey и мультимедийным центром SYNC2</span></a>
+        </div>
+
+
+
+      </div>
+
+    </div>
+
+
+  </section>
+
+  <section class="videos-extra-container">
+    <div class="videos container">
+
+      <h2 class="section-heading">Видео h2</h2>
+      <div class="videos__top">
+
+        <div class="videos__top-content">
+          <a class="news-title-link" href="#">
+            <h2 class="highlighted-news-heading">Сэм Хьюстон одержал первую победу в чемпионат</h2>
+          </a>
+
+          <p class="news-main-text">Компания Global Wireless Solutions провела любопытное исследование, в рамках
+            которого пользователям iPhone из США предлагалось ответить на некоторые вопросы, связанные с сетями связи
+            пятого …</p>
+          <div class="videos__top-content-stats news-stats">
+            <span>18 сентября, 10:49</span>
+            <span class="news-stats__dot"></span>
+            <span">12 452 просмотров</span>
+              <span class="news-stats__dot"></span>
+          </div>
+
+          <span class="videos__top-category">Новости Hardware</span>
+        </div>
+
+        <a class="videos__top-video-wrapper" href="#">
+          <img class="img" src="../images/video-1.png" alt="">
+          <svg class="play-circle" width="128" height="128" viewBox="0 0 128 128" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <circle cx="64" cy="64" r="64" fill="black" fill-opacity="0.234279" />
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M22.3333 63.9999C22.3333 40.9999 41 22.3333 64 22.3333C87 22.3333 105.667 40.9999 105.667 63.9999C105.667 86.9999 87 105.667 64 105.667C41 105.667 22.3333 86.9999 22.3333 63.9999ZM80.6666 63.9999L55.6666 45.2499V82.7499L80.6666 63.9999Z"
+              fill="white" fill-opacity="0.87" />
+          </svg>
+        </a>
+
+      </div>
+
+      <div class="videos__block">
+
+        <div class="videos__block-item">
+          <a class="videos__block-item-wrapper" href="#">
+            <img class="img" src="../images/video-2.png" alt="">
+            <svg class="play-circle" width="98" height="98" viewBox="0 0 128 128" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <circle cx="64" cy="64" r="64" fill="black" fill-opacity="0.234279" />
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M22.3333 63.9999C22.3333 40.9999 41 22.3333 64 22.3333C87 22.3333 105.667 40.9999 105.667 63.9999C105.667 86.9999 87 105.667 64 105.667C41 105.667 22.3333 86.9999 22.3333 63.9999ZM80.6666 63.9999L55.6666 45.2499V82.7499L80.6666 63.9999Z"
+                fill="white" fill-opacity="0.87" />
+            </svg>
+          </a>
+          <a class="news-title-link" href="#">
+            <h3 class="news-heading-s videos__block-item-heading">Рецензия на политический сериал The Comey Rule /
+              «Правило Коми»</h3>
+          </a>
+        </div>
+
+        <div class="videos__block-item">
+          <a class="videos__block-item-wrapper" href="#">
+            <img class="img" src="../images/video-3.png" alt="">
+            <svg class="play-circle width=" 98" height="98" viewBox="0 0 128 128" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <circle cx="64" cy="64" r="64" fill="black" fill-opacity="0.234279" />
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M22.3333 63.9999C22.3333 40.9999 41 22.3333 64 22.3333C87 22.3333 105.667 40.9999 105.667 63.9999C105.667 86.9999 87 105.667 64 105.667C41 105.667 22.3333 86.9999 22.3333 63.9999ZM80.6666 63.9999L55.6666 45.2499V82.7499L80.6666 63.9999Z"
+                fill="white" fill-opacity="0.87" />
+            </svg>
+          </a>
+          <a class="news-title-link" href="#">
+            <h3 class="news-heading-s videos__block-item-heading">Рецензия на политический!</h3>
+          </a>
+        </div>
+
+        <div class="videos__block-item">
+          <a class="videos__block-item-wrapper" href="#">
+            <img class="img" src="../images/video-4.png" alt="">
+            <svg class="play-circle" width="98" height="98" viewBox="0 0 128 128" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <circle cx="64" cy="64" r="64" fill="black" fill-opacity="0.234279" />
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M22.3333 63.9999C22.3333 40.9999 41 22.3333 64 22.3333C87 22.3333 105.667 40.9999 105.667 63.9999C105.667 86.9999 87 105.667 64 105.667C41 105.667 22.3333 86.9999 22.3333 63.9999ZM80.6666 63.9999L55.6666 45.2499V82.7499L80.6666 63.9999Z"
+                fill="white" fill-opacity="0.87" />
+            </svg>
+          </a>
+          <a class="news-title-link" href="#">
+            <h3 class="news-heading-s videos__block-item-heading">Рецензия на политический сериал The Comey Rule</h3>
+          </a>
+        </div>
+
+        <div class="videos__block-item">
+          <a class="videos__block-item-wrapper" href="#">
+            <img class="img" src="../images/video-5.png" alt="">
+            <svg class="play-circle" width="98" height="98" viewBox="0 0 128 128" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <circle cx="64" cy="64" r="64" fill="black" fill-opacity="0.234279" />
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M22.3333 63.9999C22.3333 40.9999 41 22.3333 64 22.3333C87 22.3333 105.667 40.9999 105.667 63.9999C105.667 86.9999 87 105.667 64 105.667C41 105.667 22.3333 86.9999 22.3333 63.9999ZM80.6666 63.9999L55.6666 45.2499V82.7499L80.6666 63.9999Z"
+                fill="white" fill-opacity="0.87" />
+            </svg>
+          </a>
+          <a class="news-title-link" href="#">
+            <h3 class="news-heading-s videos__block-item-heading">Рецензия на политический сериал The Comey Rule /
+              «Правило Коми»</h3>
+          </a>
+        </div>
+
+        <div class="videos__block-item">
+          <a class="videos__block-item-wrapper" href="#">
+            <img class="img" src="../images/video-6.png" alt="">
+            <svg class="play-circle" width="98" height="98" viewBox="0 0 128 128" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <circle cx="64" cy="64" r="64" fill="black" fill-opacity="0.234279" />
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M22.3333 63.9999C22.3333 40.9999 41 22.3333 64 22.3333C87 22.3333 105.667 40.9999 105.667 63.9999C105.667 86.9999 87 105.667 64 105.667C41 105.667 22.3333 86.9999 22.3333 63.9999ZM80.6666 63.9999L55.6666 45.2499V82.7499L80.6666 63.9999Z"
+                fill="white" fill-opacity="0.87" />
+            </svg>
+          </a>
+          <a class="news-title-link" href="#">
+            <h3 class="news-heading-s videos__block-item-heading">Рецензия на политический сериал The Comey Rule /
+              «Правило Коми»</h3>
+          </a>
+        </div>
+
+        <div class="videos__block-item">
+          <a class="videos__block-item-wrapper" href="#">
+            <img class="img" src="../images/video-7.png" alt="">
+            <svg class="play-circle" width="98" height="98" viewBox="0 0 128 128" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <circle cx="64" cy="64" r="64" fill="black" fill-opacity="0.234279" />
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M22.3333 63.9999C22.3333 40.9999 41 22.3333 64 22.3333C87 22.3333 105.667 40.9999 105.667 63.9999C105.667 86.9999 87 105.667 64 105.667C41 105.667 22.3333 86.9999 22.3333 63.9999ZM80.6666 63.9999L55.6666 45.2499V82.7499L80.6666 63.9999Z"
+                fill="white" fill-opacity="0.87" />
+            </svg>
+          </a>
+          <a class="news-title-link" href="#">
+            <h3 class="news-heading-s videos__block-item-heading">Рецензия на политический!</h3>
+          </a>
+        </div>
+
+        <div class="videos__block-item">
+          <a class="videos__block-item-wrapper" href="#">
+            <img class="img" src="../images/video-8.png" alt="">
+            <svg class="play-circle" width="98" height="98" viewBox="0 0 128 128" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <circle cx="64" cy="64" r="64" fill="black" fill-opacity="0.234279" />
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M22.3333 63.9999C22.3333 40.9999 41 22.3333 64 22.3333C87 22.3333 105.667 40.9999 105.667 63.9999C105.667 86.9999 87 105.667 64 105.667C41 105.667 22.3333 86.9999 22.3333 63.9999ZM80.6666 63.9999L55.6666 45.2499V82.7499L80.6666 63.9999Z"
+                fill="white" fill-opacity="0.87" />
+            </svg>
+          </a>
+          <a class="news-title-link" href="#">
+            <h3 class="news-heading-s videos__block-item-heading">Рецензия на политический сериал The Comey Rule</h3>
+          </a>
+        </div>
+
+        <div class="videos__block-item">
+          <a class="videos__block-item-wrapper" href="#">
+            <img class="img" src="../images/video-9.png" alt="">
+            <svg class="play-circle" width="98" height="98" viewBox="0 0 128 128" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <circle cx="64" cy="64" r="64" fill="black" fill-opacity="0.234279" />
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M22.3333 63.9999C22.3333 40.9999 41 22.3333 64 22.3333C87 22.3333 105.667 40.9999 105.667 63.9999C105.667 86.9999 87 105.667 64 105.667C41 105.667 22.3333 86.9999 22.3333 63.9999ZM80.6666 63.9999L55.6666 45.2499V82.7499L80.6666 63.9999Z"
+                fill="white" fill-opacity="0.87" />
+            </svg>
+          </a>
+          <a class="news-title-link" href="#">
+            <h3 class="news-heading-s videos__block-item-heading">Рецензия на политический!</h3>
+          </a>
+        </div>
+
+
+      </div>
+
+      <div class="videos-all-btn-wrapper">
+        <a href="#" class="videos-all-btn main-btn">
+          Перейти в раздел «Видео»
+          <svg class="videos-all-btn-to-right" width="8" height="12" viewBox="0 0 8 12" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <path d="M0.590027 10.59L5.17003 6L0.590027 1.41L2.00003 0L8.00003 6L2.00003 12L0.590027 10.59Z"
+              fill="#000000" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="latest-blog-news container">
+    <h2 class="section-heading">Последние записи в блогах h2</h2>
+
+    <div id="latest-blog-news__slider" class="swiper-container latest-blog-news__slider">
+      <div class="swiper-wrapper latest-blog-news__slider-wrapper">
+
+        <div class="swiper-slide latest-blog-news__slider-slide">
+          <a href="#" class="latest-blog-news__slider-img-wrapper">
+            <img src="../images/blog-article-1.png" alt="" class="img">
+          </a>
+
+          <a class="latest-blog-news__username-link" href="#"><span
+              class="latest-blog-news__username">Usernameovi4</span></a>
+
+          <a href="" class="news-title-link">
+            <h3 class="news-heading-s">На что обратить внимание, если собрались дарить инструмент на 23 февраля</h3>
+          </a>
+
+        </div>
+
+        <div class="swiper-slide latest-blog-news__slider-slide">
+          <a href="#" class="latest-blog-news__slider-img-wrapper">
+            <img src="../images/blog-article-2.png" alt="" class="img">
+          </a>
+
+          <a class="latest-blog-news__username-link" href="#"><span class="latest-blog-news__username">Userna</span></a>
+
+          <a href="" class="news-title-link">
+            <h3 class="news-heading-s">Обзор гравировальной машинки Ресанта Г-180ЭГ</h3>
+          </a>
+
+        </div>
+
+        <div class="swiper-slide latest-blog-news__slider-slide">
+          <a href="#" class="latest-blog-news__slider-img-wrapper">
+            <img src="../images/blog-article-3.png" alt="" class="img">
+          </a>
+
+          <a class="latest-blog-news__username-link" href="#"><span class="latest-blog-news__username">Smfgrg krng er
+              erg ngngner4</span></a>
+
+          <a href="" class="news-title-link">
+            <h3 class="news-heading-s">Рецензия на политический сериал The Comey Rule / «Правило Коми»</h3>
+          </a>
+
+        </div>
+
+        <div class="swiper-slide latest-blog-news__slider-slide">
+          <a href="#" class="latest-blog-news__slider-img-wrapper">
+            <img src="../images/blog-article-4.png" alt="" class="img">
+          </a>
+
+          <a class="latest-blog-news__username-link" href="#"><span
+              class="latest-blog-news__username">Usernameovi4</span></a>
+
+          <a href="" class="news-title-link">
+            <h3 class="news-heading-s">Bloomberg: В ноябре Apple проведет еще одно мероприятие — там анонсируют
+              максимальн …</h3>
+          </a>
+
+        </div>
+
+        <div class="swiper-slide latest-blog-news__slider-slide">
+          <a href="#" class="latest-blog-news__slider-img-wrapper">
+            <img src="../images/blog-article-5.png" alt="" class="img">
+          </a>
+
+          <a class="latest-blog-news__username-link" href="#"><span class="latest-blog-news__username">Sdijf iejr
+              oijvokdnrg9 34 vdkmgd…</span></a>
+
+          <a href="" class="news-title-link">
+            <h3 class="news-heading-s">На что обратить внимание, если собрались дарить инструмент на 23 февраля</h3>
+          </a>
+
+        </div>
+
+        <div class="swiper-slide latest-blog-news__slider-slide">
+          <a href="#" class="latest-blog-news__slider-img-wrapper">
+            <img src="../images/blog-article-1.png" alt="" class="img">
+          </a>
+
+          <a class="latest-blog-news__username-link" href="#"><span
+              class="latest-blog-news__username">Usernameovi4</span></a>
+
+          <a href="" class="news-title-link">
+            <h3 class="news-heading-s">На что обратить внимание, если собрались дарить инструмент на 23 февраля</h3>
+          </a>
+
+        </div>
+
+        <div class="swiper-slide latest-blog-news__slider-slide">
+          <a href="#" class="latest-blog-news__slider-img-wrapper">
+            <img src="../images/blog-article-2.png" alt="" class="img">
+          </a>
+
+          <a class="latest-blog-news__username-link" href="#"><span class="latest-blog-news__username">Userna</span></a>
+
+          <a href="" class="news-title-link">
+            <h3 class="news-heading-s">Обзор гравировальной машинки Ресанта Г-180ЭГ</h3>
+          </a>
+
+        </div>
+
+        <div class="swiper-slide latest-blog-news__slider-slide">
+          <a href="#" class="latest-blog-news__slider-img-wrapper">
+            <img src="../images/blog-article-3.png" alt="" class="img">
+          </a>
+
+          <a class="latest-blog-news__username-link" href="#"><span class="latest-blog-news__username">Smfgrg krng er
+              erg ngngner4</span></a>
+
+          <a href="" class="news-title-link">
+            <h3 class="news-heading-s">Рецензия на политический сериал The Comey Rule / «Правило Коми»</h3>
+          </a>
+
+        </div>
+
+        <div class="swiper-slide latest-blog-news__slider-slide">
+          <a href="#" class="latest-blog-news__slider-img-wrapper">
+            <img src="../images/blog-article-4.png" alt="" class="img">
+          </a>
+
+          <a class="latest-blog-news__username-link" href="#"><span
+              class="latest-blog-news__username">Usernameovi4</span></a>
+
+          <a href="" class="news-title-link">
+            <h3 class="news-heading-s">Bloomberg: В ноябре Apple проведет еще одно мероприятие — там анонсируют
+              максимальн …</h3>
+          </a>
+
+        </div>
+
+        <div class="swiper-slide latest-blog-news__slider-slide">
+          <a href="#" class="latest-blog-news__slider-img-wrapper">
+            <img src="../images/blog-article-5.png" alt="" class="img">
+          </a>
+
+          <a class="latest-blog-news__username-link" href="#"><span class="latest-blog-news__username">Sdijf iejr
+              oijvokdnrg9 34 vdkmgd…</span></a>
+
+          <a href="" class="news-title-link">
+            <h3 class="news-heading-s">На что обратить внимание, если собрались дарить инструмент на 23 февраля</h3>
+          </a>
+
+        </div>
+      </div>
+
+      <!-- If we need pagination -->
+      <div class="swiper-pagination latest-blog-news__slider-pagination"></div>
+
+      <!-- If we need scrollbar -->
+      <div class="swiper-scrollbar latest-blog-news__slider-scrollbar"></div>
+    </div>
+
+    <div class="latest-blog-news__btn-wrapper">
+      <a href="#" class="latest-blog-news__btn main-btn">
+        Перейти в раздел «Блоги»
+        <svg class="latest-blog-news-btn-to-right" width="8" height="12" viewBox="0 0 8 12" fill="none"
+          xmlns="http://www.w3.org/2000/svg">
+          <path d="M0.590027 10.59L5.17003 6L0.590027 1.41L2.00003 0L8.00003 6L2.00003 12L0.590027 10.59Z"
+            fill="#000000" />
+        </svg>
+      </a>
+    </div>
+  </section>
+
+  <section class="files container">
+    <div class="files__types">
+      <h2 class="section-heading">Раширения файлов</h2>
+
+      <div class="files__types-inner">
+        <div class="files__types-item">
+          <div class="files__types-item-icon-wrapper">
+            <img src="../images/file-type-1.png" alt="" class="img">
+          </div>
+          <span class="files__types-item-name">PDF</span>
+        </div>
+
+        <div class="files__types-item">
+          <div class="files__types-item-icon-wrapper">
+            <img src="../images/file-type-2.png" alt="" class="img">
+          </div>
+
+          <span class="files__types-item-name">TXT</span>
+        </div>
+
+        <div class="files__types-item">
+          <div class="files__types-item-icon-wrapper">
+            <img src="../images/file-type-1.png" alt="" class="img">
+          </div>
+
+          <span class="files__types-item-name">SVG</span>
+        </div>
+
+        <div class="files__types-item">
+          <div class="files__types-item-icon-wrapper">
+            <img src="../images/file-type-3.png" alt="" class="img">
+          </div>
+
+          <span class="files__types-item-name">SVG</span>
+        </div>
+
+        <div class="files__types-item">
+          <div class="files__types-item-icon-wrapper">
+            <img src="../images/file-type-1.png" alt="" class="img">
+          </div>
+
+          <span class="files__types-item-name">PNG</span>
+        </div>
+
+        <div class="files__types-item">
+          <div class="files__types-item-icon">
+            <svg width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink">
+              <rect width="46" height="46" fill="url(#pattern0)" />
+              <defs>
+                <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+                  <use xlink:href="#image0" transform="scale(0.015625)" />
+                </pattern>
+                <image id="image0" width="64" height="64"
+                  xlink:href="data:image/png;base64,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" />
+              </defs>
+            </svg>
+          </div>
+
+          <span class="files__types-item-name">SVG</span>
+        </div>
+
+        <div class="files__types-item">
+          <div class="files__types-item-icon-wrapper">
+            <img src="../images/file-type-1.png" alt="" class="img">
+          </div>
+
+          <span class="files__types-item-name">JURIWE</span>
+        </div>
+
+        <div class="files__types-item">
+          <div class="files__types-item-icon-wrapper">
+            <img src="../images/file-type-3.png" alt="" class="img">
+          </div>
+
+          <span class="files__types-item-name">KI4hjfJF</span>
+        </div>
+
+        <div class="files__types-item">
+          <div class="files__types-item-icon-wrapper">
+            <img src="../images/file-type-2.png" alt="" class="img">
+          </div>
+
+          <span class="files__types-item-name">ERFS</span>
+        </div>
+
+        <div class="files__types-item">
+          <div class="files__types-item-icon-wrapper">
+            <img src="../images/file-type-4.png" alt="" class="img">
+          </div>
+
+          <span class="files__types-item-name">SVG</span>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="files__categories">
+      <h2 class="section-heading">Категории файлов</h2>
+
+      <div class="files__categories-inner">
+        <div class="files__categories-inner-items">
+          <a href="#" class="files__categories-inner-item">Аудио-файлы</a>
+          <a href="#" class="files__categories-inner-item">Видео-файлы</a>
+          <a href="#" class="files__categories-inner-item">Рисунки, изображения</a>
+          <a href="#" class="files__categories-inner-item">Растровые изображения</a>
+          <a href="#" class="files__categories-inner-item">Векторные изображения</a>
+          <a href="#" class="files__categories-inner-item">3D-модели, изображения</a>
+        </div>
+
+        <a href="#" class="files__categories-inner__btn main-btn">
+          Все категории файлов
+          <svg class="main-btn__arrow-to-right" width="9" height="12" viewBox="0 0 9 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M0.949402 10.1815L5.33857 5.78271L0.949402 1.38396L2.30065 0.0327148L8.05065 5.78271L2.30065 11.5327L0.949402 10.1815Z"
+              fill="black" />
+          </svg>
+        </a>
+      </div>
+
+
+    </div>
+  </section>
+
+  <section class="authors-team container">
+    <h2 class="section-heading authors-team__heading">Команда авторов h2</h2>
+
+    <div class="authors-team__inner">
+      <ul class="authors-team__list">
+        <li class="authors-team__list-item">
+          <div class="authors-team__list-item-name">Василий Пупочкин</div>
+          <div class="authors-team__list-item-position">Главный редактор</div>
+        </li>
+
+        <li class="authors-team__list-item">
+          <div class="authors-team__list-item-name">Петр Васичкин</div>
+          <div class="authors-team__list-item-position">Новости, Обзоры</div>
+        </li>
+
+        <li class="authors-team__list-item">
+          <div class="authors-team__list-item-name">Сергей Бобер</div>
+          <div class="authors-team__list-item-position">Новости, Обзоры</div>
+        </li>
+
+        <li class="authors-team__list-item">
+          <div class="authors-team__list-item-name">Сергей Бобер</div>
+          <div class="authors-team__list-item-position">Новости, Обзоры</div>
+        </li>
+
+        <li class="authors-team__list-item">
+          <div class="authors-team__list-item-name">Василий Пупочкин</div>
+          <div class="authors-team__list-item-position">Главный редактор</div>
+        </li>
+
+        <li class="authors-team__list-item">
+          <div class="authors-team__list-item-name">Петр Васичкин</div>
+          <div class="authors-team__list-item-position">Новости, Обзоры</div>
+        </li>
+
+        <li class="authors-team__list-item">
+          <div class="authors-team__list-item-name">Сергей Бобер</div>
+          <div class="authors-team__list-item-position">Новости, Обзоры</div>
+        </li>
+      </ul>
+
+      <div class="authors-team__info">
+        <p class="authors-team___info-highlighted">Команда из 5 авторов, старается чтобы вы получали актуальные и точные
+          материалы.</p>
+        <p class="authors-team__info-text">Мы прикладываем максимум усилий чтобы наши новости отражали реальную ситуацию
+          в мира новых технологий!</p>
+        <a href="#" class="authors-team___info-btn main-btn">Познакомиться с командой авторов</a>
+      </div>
+    </div>
+
+  </section>
+
+  <section class="it-news container">
+    <div class="latest-it-news">
+      <h3 class="news-heading-m">Последние компьютерные новости h3</h3>
+
+      <div class="latest-it-news__breadcrumbs">
+        <a href="#" class="latest-it-news__main">Главная</a>
+        <span class="latest-it-news__arrow-to-right"><svg width="6" height="9" viewBox="0 0 6 9" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 7.9425L3.7085 4.5L0 1.0575L1.1417 0L6 4.5L1.1417 9L0 7.9425Z" fill="#999999" />
+          </svg>
+        </span>
+        <a href="#" class="latest-it-news__current">Новости IT</a>
+      </div>
+
+      <p class="latest-it-news__text news-main-text">Роботы-газонокосилки похожи на роботы-пылесосы. По крайней мере
+        внешне. Внутри же они сильно отличаются. Газонокосилки используют двигатель, который работает от аккумулятора.
+        Он снабжён режущими лезвиями, базовой станцией, проводом периметра и сенсорами, чтобы устройство не выехало куда
+        не надо. Один конец провода подключён к терминалу на базовой станции. Провод прокладывается вдоль границ вашего!
+      </p>
+
+      <h4 class="news-heading-s">Последние компьютерные новости h4</h4>
+
+      <div class="latest-it-news__img-wrapper">
+        <img src="../images/latest-it-news.png" alt="" class="img">
+      </div>
+
+      <p class="latest-it-news__text news-main-text">Роботы-газонокосилки похожи на роботы-пылесосы. По крайней мере
+        внешне. Внутри же они сильно отличаются. Газонокосилки используют двигатель, который работает от аккумулятора.
+        Он снабжён режущими лезвиями, базовой станцией, проводом периметра и сенсорами, чтобы устройство не выехало куда
+        не надо. Один конец провода подключён к терминалу на базовой станции. Провод прокладывается вдоль границ вашего
+        газона при помощи стоек, наподобие тех, которые применяются при установке палатки. Другой конец провода
+        подключается ко второму терминалу. </p>
+
+      <p class="latest-it-news__text news-main-text">База не только заряжает газонокосилку, но и даёт электрический
+        заряд проводу. Сенсоры на газонокосилке используют заряженный провод, чтобы она двигалась вдоль его границ и
+        возвращалась на базу, когда процесс завершён или когда требуется подзарядка.</p>
+
+      <p class="latest-it-news__text news-main-text">Роботы-газонокосилки похожи на роботы-пылесосы. По крайней мере
+        внешне. Внутри же они сильно отличаются. Газонокосилки используют двигатель, который работает от аккумулятора.
+        Он снабжён режущими лезвиями, базовой станцией, проводом периметра и сенсорами, чтобы устройство не выехало куда
+        не надо.</p>
+
+      <div class="latest-it-news__rating">
+
+        <span class="latest-it-news__star">
+          <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M10 15.27L16.18 19L14.54 11.97L20 7.24L12.81 6.63L10 0L7.19 6.63L0 7.24L5.46 11.97L3.82 19L10 15.27Z"
+              fill="#F7B500" />
+          </svg>
+        </span>
+
+        <span class="latest-it-news__star">
+          <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M10 15.27L16.18 19L14.54 11.97L20 7.24L12.81 6.63L10 0L7.19 6.63L0 7.24L5.46 11.97L3.82 19L10 15.27Z"
+              fill="#F7B500" />
+          </svg>
+        </span>
+
+        <span class="latest-it-news__star">
+          <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M10 15.27L16.18 19L14.54 11.97L20 7.24L12.81 6.63L10 0L7.19 6.63L0 7.24L5.46 11.97L3.82 19L10 15.27Z"
+              fill="#F7B500" />
+          </svg>
+        </span>
+
+        <span class="latest-it-news__star">
+          <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M10 15.27L16.18 19L14.54 11.97L20 7.24L12.81 6.63L10 0L7.19 6.63L0 7.24L5.46 11.97L3.82 19L10 15.27Z"
+              fill="#F7B500" />
+          </svg>
+        </span>
+
+        <span class="latest-it-news__star">
+          <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M10 15.27L16.18 19L14.54 11.97L20 7.24L12.81 6.63L10 0L7.19 6.63L0 7.24L5.46 11.97L3.82 19L10 15.27Z"
+              fill="#F7B500" />
+          </svg>
+        </span>
+
+        <span class="latest-it-news__rating-score"><b>Рейтинг: </b>(4.99, голосов: 108)</span>
+
+      </div>
+    </div>
+
+    <div class="it-news__answers">
+      <h3 class="news-heading-m">Ответы на часто задаваемые вопросы h3</h3>
+      <div class="it-news__answers-accordion">
+        <div class="it-news__answers-accordion-item">
+          <button class="it-news__answers-question">
+            ⚡ Какие IT новости самые популярные
+            <svg class="it-news__answers-arrow" width="13" height="8" viewBox="0 0 13 8" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M1.70498 0.294922L6.29498 4.87492L10.885 0.294922L12.295 1.70492L6.29498 7.70492L0.294983 1.70492L1.70498 0.294922Z"
+                fill="black" />
+            </svg>
+          </button>
+          <div class="it-news__answers-answer">
+            <p class="it-news__answers-answer-text">Some content</p>
+          </div>
+        </div>
+
+        <div class="it-news__answers-accordion-item">
+          <button class="it-news__answers-question">
+            🏅 Где смотреть компьютерные новости
+            <svg class="it-news__answers-arrow" width="13" height="8" viewBox="0 0 13 8" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M1.70498 0.294922L6.29498 4.87492L10.885 0.294922L12.295 1.70492L6.29498 7.70492L0.294983 1.70492L1.70498 0.294922Z"
+                fill="black" />
+            </svg>
+          </button>
+          <div class="it-news__answers-answer">
+            <p class="it-news__answers-answer-text">Роботы-газонокосилки похожи на роботы-пылесосы. По крайней мере
+              внешне. Внутри же они сильно отличаются. Газонокосилки используют двигатель, который работает от
+              аккумулятора. Он снабжён режущими лезвиями, базовой станцией, проводом периметра и сенсорами, чтобы
+              устройство не выехало куда не надо. Один конец провода подключён к терминалу на базовой станции.</p>
+          </div>
+        </div>
+
+        <div class="it-news__answers-accordion-item">
+          <button class="it-news__answers-question">
+            🎁 Какие разделы сайта QWE наиболее популярные
+            <svg class="it-news__answers-arrow" width="13" height="8" viewBox="0 0 13 8" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M1.70498 0.294922L6.29498 4.87492L10.885 0.294922L12.295 1.70492L6.29498 7.70492L0.294983 1.70492L1.70498 0.294922Z"
+                fill="black" />
+            </svg>
+          </button>
+          <div class="it-news__answers-answer">
+            <p class="it-news__answers-answer-text">Some content</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-top-extra-container">
+      <div class="footer__top container">
+        <nav class="footer__menu">
+          <ul class="footer__menu-list">
+            <li class="footer__menu-list-title">QWEDR</li>
+            <a href="#" class="footer__menu-list-item-link">
+              <li class="footer__menu-list-item">О сайте</li>
+            </a>
+            <a href="#" class="footer__menu-list-item-link">
+              <li class="footer__menu-list-item">Команда сайта</li>
+            </a>
+            <a href="#" class="footer__menu-list-item-link">
+              <li class="footer__menu-list-item">Карта сайта</li>
+            </a>
+            <a href="#" class="footer__menu-list-item-link">
+              <li class="footer__menu-list-item">Политика конфиденциальности</li>
+            </a>
+            <a href="#" class="footer__menu-list-item-link">
+              <li class="footer__menu-list-item">Реклама</li>
+            </a>
+            <a href="#" class="footer__menu-list-item-link">
+              <li class="footer__menu-list-item">Контакты</li>
+            </a>
+          </ul>
+  
+          <ul class="footer__menu-list">
+            <li class="footer__menu-list-title">Популярные блоги</li>
+            <a href="#" class="footer__menu-list-item-link">
+              <li class="footer__menu-list-item">Компьютерные советы</li>
+            </a>
+            <a href="#" class="footer__menu-list-item-link">
+              <li class="footer__menu-list-item">Искусственный интеллект</li>
+            </a>
+            <a href="#" class="footer__menu-list-item-link">
+              <li class="footer__menu-list-item">Компьютерные выставки</li>
+            </a>
+          </ul>
+  
+          <ul class="footer__menu-list">
+            <li class="footer__menu-list-title">Популярные блоги</li>
+            <a href="#" class="footer__menu-list-item-link">
+              <li class="footer__menu-list-item">Компьютерные советы</li>
+            </a>
+            <a href="#" class="footer__menu-list-item-link">
+              <li class="footer__menu-list-item">Искусственный интеллект</li>
+            </a>
+            <a href="#" class="footer__menu-list-item-link">
+              <li class="footer__menu-list-item">Компьютерные выставки</li>
+            </a>
+          </ul>
+  
+          <ul class="footer__menu-list">
+            <li class="footer__menu-list-title">Другое</li>
+            <a href="#" class="footer__menu-list-item-link">
+              <li class="footer__menu-list-item">Компьютерные советы</li>
+            </a>
+            <a href="#" class="footer__menu-list-item-link">
+              <li class="footer__menu-list-item">Искусственный интеллект</li>
+            </a>
+            <a href="#" class="footer__menu-list-item-link">
+              <li class="footer__menu-list-item">Компьютерные выставки</li>
+            </a>
+          </ul>
+        </nav>
+  
+        <div class="footer__social">
+          <span>
+            <b class="footer__social-text">Наши социальные сети:</b>
+            <a href="#" class="footer__social-media" target="_blank">Вконтакте,</a>
+            <a href="#" class="footer__social-media" target="_blank">Youtube,</a>
+            <a href="#" class="footer__social-media" target="_blank">Facebook,</a>
+            <a href="#" class="footer__social-media" target="_blank">Instagram,</a>
+            <a href="#" class="footer__social-media" target="_blank">Telegram,</a>
+            <a href="#" class="footer__social-media" target="_blank">Twitter</a>
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom-extra-container">
+      <div class="footer__bottom container">
+        <div class="footer__bottom-content">
+          <span class="footer__bottom-content-text">© 2021 Qwe</span>
+          <span class="footer__bottom-content-text">При цитировании документа ссылка на сайт с указанием автора обязательна. Полное заимствование документа является нарушением российского и международного законодательства и возможно только с согласия редакции qwe.com.</span>
+        </div>
+
+        <span class="footer__bottom-age-limit">18+</span>
+      </div>
+    </div>
+  </footer>
+
+  <script defer src="../js/script.min.js"></script>
 </body>
+
 </html>

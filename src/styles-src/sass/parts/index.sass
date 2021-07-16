@@ -1,0 +1,1024 @@
+.container
+  //width: 1240px
+  //margin-left: auto
+  //margin-right: auto
+
+// === HEADER ==============================
+.header-top
+  height: 50px
+  background-color: $header-top-bg-color
+  display: flex
+  align-items: center
+
+.header-top-inner
+  position: relative
+  display: flex
+  align-items: center
+
+.header-top__logo
+  margin-left: 35px
+
+.header-top__buttons
+  margin-left: auto
+
+.header-top__btn
+  display: inline-block
+  padding: 6px 16px
+  color: $header-btn-text-color
+  font-size: 14px
+  border: 1px solid transparent
+  border-radius: $header-btn-boder-radius
+  @include fw-medium
+
+  &:hover
+    border-color: $header-btn-boder-color
+
+.header-bottom
+  display: flex
+  align-items: center
+  height: 45px
+  @include border-bottom-light
+
+.header-bottom-inner
+  display: flex
+  align-items: center
+
+.header-bottom__search
+  display: block
+  margin-left: auto
+
+.header-bottom__theme-switch
+  display: block
+  margin-left: 8px
+
+.header-bottom__menu-list
+  display: flex
+  align-items: baseline
+  list-style-type: none
+  padding-left: 0
+  margin: 0
+
+.header-bottom__menu-list-item
+  display: flex
+  align-items: flex-end
+  margin-right: 25px
+  color: $header-menu-color
+  font-size: 14px
+  text-transform: uppercase
+  @include fw-bold
+
+// ==== HEADER BURGER MENU ==============================
+.burger-menu__list
+  margin: 0
+  list-style-type: none
+  padding-left: 0
+
+.burger-menu__list-item
+  display: flex
+  align-items: center
+  height: 60px
+  width: 305px
+
+  &:hover
+    background-color: $burger-menu-list-item-hover
+
+.burger-menu__list-item:hover .burger-menu__list-svg
+  filter: grayscale(100%)
+
+.burger-menu__list-item-icon
+  margin: 0 10px
+
+.burger-menu__list-item-info
+  margin-bottom: 2px
+
+.burger-menu__list-item-name
+  display: block
+  font-size: 18px
+  color: $main-text-color
+  @include fw-bold
+
+.burger-menu__list-item-descr
+  display: block
+  font-size: 14px
+  color: $burger-menu-list-item-descr-color
+
+//TODO: ADD ONLY TO MOBILE
+// body.lock
+  // overflow: hidden
+
+.header-top__burger-menu
+  display: block
+  position: absolute
+  width: 18px
+  height: 12px
+  z-index: 3
+  left: 0
+  top: 50%
+  transform: translate(0, -50%)
+
+  .header-top__burger-menu-lines
+    position: absolute
+    background-color: $burger-menu-bg-color
+    left: 0
+    width: 100%
+    height: 2px
+    top: 5px
+    transition: all .3s ease 0s
+
+  &::before,
+  &::after
+    content: ''
+    background-color: $burger-menu-lines-color
+    position: absolute
+    width: 100%
+    height: 2px
+    left: 0
+    transition: all .5s ease 0s
+
+  &::before
+    top: 0
+
+  &::after
+    bottom: 0
+
+.active
+  &::before
+    transform: rotate(45deg)
+    top: 5px
+    background-color: $burger-menu-lines-color
+
+  &::after
+    transform: rotate(-45deg)
+    bottom: 5px
+    background-color: $burger-menu-lines-color
+
+  .header-top__burger-menu-lines
+    transform: scale(0)
+
+.header-top__burger-menu-nav
+  position: fixed
+  overflow: auto
+  top: -200%
+  transition: all 1s ease 0s
+  background-color: $burger-menu-bg-color
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.355028)
+  padding: 8px
+
+.header-top__burger-menu-nav.active
+  position: absolute
+  top: 50px
+  display: flex
+  align-items: center
+  justify-content: center
+  z-index: 2
+
+.burger-menu__list
+  display: block
+
+// === TOP SECTION ==============================
+.top
+  padding-bottom: 20px
+
+.top__heading
+  font-size: 22px
+
+.top__inner
+  display: flex
+
+.top-img-wrapper
+  display: block
+  width: 800px
+  height: 400px
+  flex-shrink: 0
+
+.top-content
+  margin-left: 25px
+
+.top-content__news-category
+  margin: 0
+
+.top-content__heading
+  margin: 20px 0
+  font-size: 24px
+  @include fw-bold
+
+.top-content__text
+  font-size: 14px
+
+// === TOP NEWS SECTION ==============================
+.top-news
+  display: flex
+  justify-content: space-between
+  margin-bottom: 50px
+
+.top-news-item
+  width: 295px
+
+.top-news__img-wrapper
+  display: block
+  width: 295px
+  height: 160px
+
+.top-news__category
+  color: $news-category-color
+  margin: 10px 0
+  @include text-hover-underline
+  @include fw-medium
+
+  &:hover
+    color: $top-news-category-hover
+    text-decoration-color: $top-news-category-hover
+
+  &:visited
+    color: $top-news-category-visited
+
+// === NEWS BLOCKS ==============================
+.news-blocks
+  display: flex
+
+// === LATEST NEWS SECTION ==============================
+.main-news-block
+  width: 840px
+  margin-bottom: 25px
+  margin-right: 30px
+
+.latest-news__container
+  position: relative
+
+.latest-news__tabs-hide-btn
+  position: absolute
+  top: 25px
+  right: 0
+  font-size: calc(12px + 2 *(100vw - 320px) / (1440 - 320))
+  color: $tabs-color
+  background-color: transparent
+
+.latest-news__tabs
+  padding: 0 25px 25px 25px
+  @include border-light
+  
+.latest-news__tabs-control
+  @include border-bottom-light
+
+  .tabs__tab
+    cursor: pointer
+    font-size: calc(14px + 2 *(100vw - 320px) / (1440 - 320))
+    background-color: transparent
+    padding-bottom: 8px
+    padding-top: 25px
+    margin-right: 25px
+    color: $tabs-color
+
+    &:hover
+      color: $main-text-color
+      text-shadow: 0 0 .9px #333, 0 0 .9px #333, 0 0 .9px #333
+
+  .tabs__tab--current
+    border-bottom: 5px solid $tabs-current-border-bottom-color
+    text-shadow: 0 0 .9px #333, 0 0 .9px #333, 0 0 .9px #333
+    color: $main-text-color
+
+.latest-news__tabs-inner
+  list-style-type: square
+  margin: 0
+  padding: 25px 0 5px 18px
+
+.latest-news__list-item
+  margin-bottom: 10px
+
+.latest-news__time
+  color: $main-text-color
+  font-size: calc(13px + 3 *(100vw - 320px) / (1440 - 320))
+  margin-right: 10px
+
+.latest-news__title
+  font-size: calc(14px + 2 *(100vw - 320px) / (1440 - 320))
+  color: $main-text-color
+  @include text-hover-underline 
+
+.latest-news__show-more-btn
+  color: $tabs-show-more-btn
+  font-size: calc(14px + 2 *(100vw - 320px) / (1440 - 320))
+
+  .arrow-to-down-2
+    vertical-align: middle
+
+.sidebar-news-block
+  width: 370px
+
+// === ALL NEWS SECTION ==============================
+.all-news__block
+  margin-bottom: 20px
+
+.all-news__img-wrapper
+  display: block
+  width: 255px
+  height: 190px
+  flex-shrink: 0
+
+.all-news__item
+  display: flex
+  margin-bottom: 10px
+
+  &:last-child
+    margin-bottom: 0
+
+.all-news__content
+  margin-left: 10px
+
+// === POPULAR TOPIC SECTION ==============================
+.popular-topic
+  background-image: url('../images/popular-topic-bg.png')
+  padding: 20px 40px
+
+.popular-topic__label
+  display: inline-block
+  background: linear-gradient(0deg, rgba(67, 67, 213, 0.5), rgba(67, 67, 213, 0.5)), linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(315deg, #4c969c 0.16%, #bd82c6 99.84%)
+  color: $popular-topic-label-color
+  border-radius: 4px
+  font-size: 14px
+  text-transform: uppercase
+  padding: 10px 14px
+
+.popular-topic__heading
+  font-size: 26px
+  color: $popular-topic-text-color
+  @include fw-bold
+
+.popular-topic__list
+  list-style-type: square
+  color: $popular-topic-text-color
+  padding-left: 15px
+  margin-bottom: 25px
+
+.popular-topic__list-item
+  margin-bottom: 15px
+
+.popular-topic__list-item-link
+  color: $popular-topic-text-color
+  font-size: 16px
+  @include text-hover-underline 
+  @include fw-medium
+
+.popular-topic__btn
+  color: $popular-topic-btn-color
+  font-size: 16px
+  @include text-hover-underline  
+  @include fw-medium
+
+.popular-topic__btn-arrow
+  vertical-align: middle
+  margin-left: 6px
+
+  path
+    fill: $popular-topic-btn-color
+
+// === POPULAR NEWS SECTION (ASIDE) ==============================
+.popular-news__block
+  margin-bottom: 20px
+
+.popular-news__item
+  display: flex
+  margin-bottom: 18px
+
+.popular-news__img-wrapper
+  display: block
+  width: 90px
+  height: 90px
+  flex-shrink: 0
+
+.popular-news__content
+  margin-left: 15px
+
+// === DISCUSS NEWS SECTION (ASIDE) ==============================
+.discuss-news
+  margin-top: 40px
+
+.discuss-news__wrapper
+  padding: 20px
+  @include border-light
+
+.discuss-news__user-img-wrapper
+  width: 32px
+  height: 32px
+
+.discuss-news__comment-block
+  padding-bottom: 10px
+  @include border-bottom-light
+
+  &:last-child
+    border-bottom: 0
+
+.discuss-news__user
+  display: flex
+  align-items: center
+
+.discuss-news__user-name
+  margin: 0 8px
+  font-size: 14px
+  @include text-hover-underline 
+  @include fw-medium
+
+.main-news-text
+  padding: 10px
+  background-color: $comment-bg-color
+  border-radius: 4px
+  margin-top: 0
+  line-height: 1.3
+
+  &:hover
+    background-color: $comment-bg-color-hover
+
+.discuss-news__source
+  font-size: 14px
+  @include text-hover-underline 
+  @include fw-medium
+
+// === POPULAR TOPICS SECTION (ASIDE) ==============================
+.popular-topics__heading
+  font-size: 22px
+  @include fw-medium
+
+.popular-topics__item
+  display: inline-block
+  padding: 10px 15px
+  border-radius: 2px
+  font-size: 14px
+  color: $main-text-color
+  margin-bottom: 8px
+  @include border-light
+  @include fw-medium
+
+  &:hover
+    border-color: $popular-topics-border-color
+
+// === SUBSCRIBE SECTION (ASIDE) ==============================
+.subcsribe__block
+  padding: 20px
+  border-radius: 2px
+  @include border-light
+
+.subcsribe__frequency
+  display: block
+  font-size: 16px
+  @include fw-medium
+
+.subcsribe__call-on
+  display: block
+  margin: 10px 0
+  font-size: 16px
+
+.subcsribe__form
+  display: inline-flex
+  width: 100%
+  height: 50px
+  padding: 0 15px
+  border-radius: 2px
+  margin-top: 10px
+  @include border-light
+
+.subcsribe__email-field
+  width: 100%
+
+.subcsribe__email-field::placeholder
+  font-size: 16px
+  @include fw-medium
+
+.subcsribe__email-btn
+  background-color: transparent
+  margin-left: auto
+  cursor: pointer
+
+  &:hover .subcsribe__email-btn-icon path
+    fill: $main-btn-text-color
+
+// === NEWS WITH PAGINATION SECTION ==============================
+.news-with-pagination
+  margin-bottom: 80px
+
+.news-with-pagination__news-block
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-between
+  margin-bottom: 30px
+
+.news-with-pagination__news-item
+  position: relative
+  width: 400px
+  margin-bottom: 25px
+  height: 430px
+
+.news-with-pagination__img-wrapper
+  display: block
+  position: relative
+  width: 400px
+  height: 230px
+
+.news-with-pagination__img-wrapper-gradient
+  position: absolute
+  bottom: 0
+  height: 50px
+  width: 100%
+  background-image: linear-gradient(to top, #000000, transparent)
+
+.news-with-pagination__category
+  position: absolute
+  bottom: 20px
+  left: 20px
+  color: $news-with-pagination-bg-color
+  font-size: 14px
+  display: flex
+  align-items: center
+  @include text-hover-underline
+  @include fw-medium
+
+.news-with-pagination__category-icon
+  display: inline-block
+  width: 5px
+  height: 20px
+  background-color: $news-with-pagination-icon
+  margin-right: 8px
+
+.news-with-pagination__news-title
+  font-size: 20px
+  @include text-hover-underline
+  @include fw-bold
+
+.news-with-pagination__stats
+  position: absolute
+  bottom: 0
+
+.news-with-pagination__pagination-block
+  display: flex
+  align-items: center
+  justify-content: center
+
+.news-with-pagination__btn
+  display: inline-flex
+  justify-content: center
+  align-items: center
+  font-size: 16px
+  color: $news-with-pagination-btn
+  height: 46px
+  @include border-light
+
+  &:hover
+    border-color: $main-btn-boder-color
+    color: $main-text-color
+
+.news-with-pagination__btn-prev,
+.news-with-pagination__btn-next
+  padding: 0 15px
+
+.pagination__to-left-arrow
+  margin-right: 10px
+
+.pagination__to-right-arrow
+  margin-left: 10px
+
+.news-with-pagination__btn:hover .pagination__to-left-arrow path,
+.news-with-pagination__btn:hover .pagination__to-right-arrow path
+  fill: $main-btn-text-color
+
+.news-with-pagination__pages
+  margin: 0 35px
+
+.news-with-pagination__pages-num
+  width: 38px
+
+  &:hover
+    border-color: $news-with-pagination-hover
+    color: $news-with-pagination-hover
+
+.news-with-pagination__pages-num--current
+  border: 2px solid $news-with-pagination-hover
+  color: $news-with-pagination-hover
+
+.news-with-pagination__pages-more
+  margin: 0 10px
+  color: $news-with-pagination-btn
+
+// === NEWS CATEGORIES SECTION ==============================
+.news-categories-block
+  display: flex
+  flex-direction: column
+  margin-bottom: 20px
+
+.news-category__item-img-wrapper
+  display: block
+  width: 295px
+  height: 190px
+
+.news-category__top
+  display: flex
+  align-items: center
+  justify-content: space-between
+
+.news-category__all
+  color: $all-news-category
+  font-size: 14px
+  @include text-hover-underline
+
+.news-category__items
+  display: flex
+  justify-content: space-between
+  padding-top: 15px
+  margin-bottom: 35px
+  @include border-top-light
+
+.news-category__item
+  width: 295px
+
+.news-category__item-title
+  @include text-hover-underline
+
+.news-category__item-subcategory
+  display: block
+  font-size: 14px
+  margin: 10px 0
+  color: $all-news-category
+  @include text-hover-underline
+
+// === VIDEOS SECTION ==============================
+.videos-extra-container
+  background-color: $videos-section-bg-color
+  padding: 30px 0
+
+.videos__heading
+  font-size: 22px
+  @include text-hover-underline
+  @include fw-bold
+
+.videos__top
+  display: flex
+  margin-bottom: 40px
+
+.videos__top-content
+  border-top: 5px solid $videos-section-border-color
+  margin-right: 60px
+
+.videos__top-content-stats
+  display: inline-block
+
+.videos__top-video-wrapper
+  position: relative
+  display: block
+  width: 700px
+  height: 390px
+  flex-shrink: 0
+
+.play-circle
+  position: absolute
+  left: 50%
+  top: 50%
+  transform: translate(-50%, -50%)
+
+.videos__block
+  display: flex
+  justify-content: space-between
+  flex-wrap: wrap
+
+.videos__block-item
+  width: 300px
+
+.videos__block-item-wrapper
+  position: relative
+  display: block
+  width: 300px
+  height: 180px
+
+.videos__block-item-img
+  filter: brightness(90%)
+
+.videos__block-item-heading
+  margin-right: 25px
+
+.videos-all-btn-wrapper,
+.latest-blog-news__btn-wrapper
+  display: flex
+  justify-content: center
+  margin-top: 25px
+
+.videos-all-btn,
+.latest-blog-news__btn
+  padding: 15px 255px
+  border: 1px solid $main-btn-border-color-light
+  border-radius: 1px
+
+.videos-all-btn-to-right,
+.latest-blog-news-btn-to-right
+  margin-left: 10px
+
+// === LATEST BLOG NEWS ==============================
+.latest-blog-news
+  margin-top: 40px
+  margin-bottom: 80px
+
+.latest-blog-news__slider-slide
+  position: relative
+
+.latest-blog-news__slider-img-wrapper
+  display: block
+  width: 240px
+  height: 290px
+
+.latest-blog-news__username-link
+  display: block
+  position: absolute
+  font-size: 12px
+  top: 240px
+  left: 15px
+  padding: 8px 10px
+  color: $username-color
+  background-color: $username-bg-color
+  border-radius: 4px
+  @include fw-medium
+
+.latest-blog-news__slider
+  overflow: hidden
+
+.latest-blog-news__slider-wrapper
+  display: flex
+
+.latest-blog-news__slider-pagination
+  position: relative
+  height: 6px
+  background-color: $latest-blog-news-pagination-bg
+  border-radius: 4px
+
+  .swiper-pagination-progressbar-fill
+    background-color: $latest-blog-news-pagination-progress
+    border-radius: 4px
+    position: absolute
+    left: 0
+    top: 0
+    width: 100%
+    height: 100%
+    transform-origin: left top
+
+// === FILES SECTION ==============================
+.files
+  display: flex
+  padding-bottom: 50px
+
+.files__types-inner
+  display: grid
+  grid-template-columns: repeat(5, 120px)
+  grid-template-rows: repeat(2, 130px)
+  grid-gap: 12px
+
+.files__types-item-icon-wrapper
+  width: 46px
+  height: 46px
+
+.files__types-item
+  border-radius: 2px
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: center
+  @include border-light
+
+.files__types-item-name
+  margin-top: 20px
+  font-size: 16px
+  @include fw-medium
+
+.files__categories
+  width: 100%
+  margin-left: 50px
+
+.files__categories-inner-items
+  border-radius: 2px
+  padding: 15px 20px
+  border-bottom: 0
+  @include border-light
+
+.files__categories-inner-item
+  display: block
+  color: $main-text-color
+  margin-bottom: 15px
+
+  &:last-child
+    margin-bottom: 0
+
+.files__categories-inner__btn
+  font-size: 18px
+  vertical-align: middle
+  padding: 15px 20px
+  width: 100%
+  border-radius: 2px
+  @include fw-medium
+  @include border-light
+
+// === AUTHORS TEAM SECTION ==============================
+.authors-team
+  margin-bottom: 70px
+  background-color: $authors-section-bg-color
+  padding: 30px 30px 50px 30px
+  box-shadow: 10px 10px 0px 1px $authors-section-box-shadow-color
+
+.authors-team__inner
+  display: flex
+  justify-content: space-between
+  align-items: center
+
+.authors-team__heading
+  margin-bottom: 30px
+  display: inline-block
+  border-bottom: 4px solid $authors-section-heading-bottom-color
+
+.authors-team__list
+  list-style-type: none
+  margin: 0
+  padding-left: 0
+  display: grid
+  grid-template-columns: repeat(2, 1fr)
+  grid-template-rows: repeat(4, 1fr)
+  grid-column-gap: 70px
+  grid-row-gap: 25px
+
+.authors-team__list-item-name
+  font-size: 18px
+  @include fw-bold
+
+.authors-team__list-item-position
+  font-size: 14px
+
+.authors-team__info
+  width: 575px
+
+.authors-team___info-highlighted
+  font-size: 28px
+  margin: 0
+  @include fw-medium
+
+.authors-team__info-text
+  font-size: 16px
+  margin: 20px 0
+  width: 475px
+
+.authors-team___info-btn
+  padding: 15px 35px
+  border-radius: 2px
+
+// === IT NEWS ==============================
+.it-news
+  padding-bottom: 25px
+  display: flex
+  justify-content: space-between
+
+.latest-it-news__img-wrapper
+  width: 600px
+  height: 140px
+
+.latest-it-news
+  width: 600px
+
+.latest-it-news__main,
+.latest-it-news__current
+  color: $latest-it-news-breadcrumbs-color
+  font-size: 16px
+
+.latest-it-news__arrow-to-right
+  display: inline-block
+  margin: 0 10px
+
+.latest-it-news__rating
+  display: flex
+  align-items: center
+
+.latest-it-news__rating-score
+  margin-left: 8px
+  font-size: 16px
+
+.it-news__answers
+  margin-left: 40px
+
+.it-news__answers-accordion
+  width: 100%
+  margin-top: 15px
+
+.it-news__answers-accordion-item
+  background-color: $latest-it-news-accordion-bg-color
+  border: 1px solid $latest-it-news-border-color
+  border-radius: 4px
+  margin-bottom: 15px
+
+.it-news__answers-question
+  padding: 15px 25px
+  font-size: 16px
+  background-color: $latest-it-news-accordion-bg-color
+  width: 100%
+  text-align: left
+  display: flex
+  justify-content: space-between
+  align-items: center
+  line-height: 1.4
+  @include fw-bold
+
+.it-news__answers-arrow--active
+  transform: rotate(180deg)
+
+.it-news__answers-answer
+  max-height: 0
+  overflow: hidden
+  transition: max-height 0.2s ease-out
+
+.it-news__answers-answer-text
+  padding: 30px
+  padding-top: 10px
+  margin: 0
+  color: $main-text-color
+  font-size: 14px
+
+// === FOOTER ==============================
+.footer-top-extra-container
+  background-color: $footer-top-bg
+
+.footer-bottom-extra-container
+  background-color: $footer-bottom-bg
+
+.footer__menu
+  padding-top: 40px
+  display: flex
+  justify-content: space-between
+
+.footer__menu-list
+  list-style-type: none
+  padding-left: 0
+
+.footer__menu-list-title
+  color: $footer-menu-list-title-color
+  font-size: 16px
+  margin-bottom: 20px
+
+.footer__menu-list-item
+  color: $footer-menu-list-item-color
+  font-size: 16px
+  margin-bottom: 15px
+  @include text-hover-underline
+
+  &:hover
+    color: $footer-menu-list-item-color-hover
+
+.footer__social
+  padding: 20px 0
+
+.footer__social-text
+  font-size: 16px
+  color: $footer-menu-list-title-color
+  margin-right: 8px
+
+.footer__social-media
+  color: $footer-social-media-color
+
+.footer__bottom
+  padding-top: 30px
+  padding-bottom: 15px
+  display: flex
+  align-items: center
+  justify-content: space-between
+
+.footer__bottom-content-text
+  display: inline-block
+  font-size: 14px
+  color: $footer-bottom-text-color
+  width: 900px
+  margin-bottom: 10px
+
+.footer__bottom-age-limit
+  display: block
+  font-size: 14px
+  color: $footer-bottom-text-color
+
+// === MEDIA QUERIES FOR CONTAINER (mobile-first) =========
+@media (min-width: 320px)
+  .container
+    max-width: 300px
+    margin-left: auto
+    margin-right: auto
+
+@media (min-width: 576px)
+  .container
+    max-width: 540px
+
+@media (min-width: 768px)
+  .container
+    max-width: 720px
+
+@media (min-width: 992px)
+  .container
+    max-width: 960px
+
+@media (min-width: 1200px)
+  .container
+    max-width: 1140px
+
+@media (min-width: 1400px)
+  .container
+    max-width: 1240px
+
+@media (min-width: 1600px)
+  .container
+    max-width: 1320px

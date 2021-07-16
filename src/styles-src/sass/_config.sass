@@ -1,4 +1,128 @@
-// IMPORT SECTION
+// === IMPORT SECTION ==============================
 @import '/node_modules/normalize.css/normalize.css'
 
-// FONTS, MIXINS, COLOR VARIABLES
+// === FONTS ==============================
+@font-face
+  font-family: 'Roboto'
+  src: url('../fonts/roboto/Roboto-Regular.woff2') format('woff2'), url('../fonts/roboto/Roboto-Regular.woff') format('woff')
+  font-weight: 400
+  font-style: normal
+
+@font-face
+  font-family: 'Roboto'
+  src: url('../fonts/roboto/Roboto-Medium.woff2') format('woff2'), url('../fonts/roboto/Roboto-Medium.woff') format('woff')
+  font-weight: 500
+  font-style: normal
+
+@font-face
+  font-family: 'Roboto'
+  src: url('../fonts/roboto/Roboto-Bold.woff2') format('woff2'), url('../fonts/roboto/Roboto-Bold.woff') format('woff')
+  font-weight: 700
+  font-style: normal
+
+// === VARIABLES ==============================
+// === font size === 
+$main-text-fsz: 14px
+$section-heading-fsz: calc(16px + 6 *(100vw - 320px) / (1440 - 320))
+$highlighted-news-heading: calc(18px + 6 *(100vw - 320px) / (1440 - 320))
+$news-heading-m-fsz: calc(17px + 3 *(100vw - 320px) / (1440 - 320))
+$news-heading-s-fsz: calc(14px + 4 *(100vw - 320px) / (1440 - 320))
+$news-heading-xs-fsz: calc(14px + 2 *(100vw - 320px) / (1440 - 320))
+
+// === font colors === 
+$main-text-color: #000000
+$section-heading-color: #000000
+$news-title-color: #000000
+$news-stats-color: #888888
+$news-category-color: #444444
+$all-news-category: #555555
+
+$top-news-category-hover: #a60000
+$top-news-category-visited: #3333d2
+
+$burger-menu-list-item-hover: #f0f0f0
+$burger-menu-list-item-descr-color: #999999
+$header-btn-text-color: #ffffff
+$header-menu-color: #000000
+
+$tabs-color: #777777
+
+$popular-topic-label-color: #ffffff
+$popular-topic-text-color: #ffffff
+
+$username-color: #444444
+$username-bg-color: #eeeff2
+
+$latest-it-news-breadcrumbs-color: #555555
+$latest-it-news-accordion-bg-color: #ffffff
+$latest-it-news-border-color: #d8d8d8
+
+$footer-menu-list-title-color: #aaaaaa
+$footer-menu-list-item-color: #ffffff
+$footer-menu-list-item-color-hover: #aaaaff
+$footer-social-media-color: #ffffff
+$footer-bottom-text-color: #aaaaaa
+
+// === background colors ===
+$header-top-bg-color: #000000
+$burger-menu-bg-color: #ffffff
+$burger-menu-lines-color: #ffffff
+
+$comment-bg-color: #f3f3f6
+$comment-bg-color-hover: #ebebf6
+
+$videos-section-bg-color: #f0f8ff
+
+$news-with-pagination-bg-color: #ffffff
+$news-with-pagination-icon: #000000
+$news-with-pagination-hover: #000000
+
+$latest-blog-news-pagination-bg: #f2f2f2
+$latest-blog-news-pagination-progress: #b2b2b2
+
+$authors-section-bg-color: #ebf5ff
+$authors-section-box-shadow-color: #ddddf8
+$authors-section-heading-bottom-color: #ddddf8
+
+$footer-top-bg: #444444
+$footer-bottom-bg: #333333
+
+// === border colors === 
+$header-bottom_border-color: #E8E8E8
+$tabs-current-border-bottom-color: #8d8df8
+$popular-topics-border-color: #3333d2
+$videos-section-border-color: #8d8df8
+
+// === buttons ===
+$main-btn-border-color: #000000
+$main-btn-border-color-light: #c9c9c9
+$main-btn-bg-color: #ffffff
+$main-btn-text-color: #000000
+$main-btn-boder-color: #000000
+
+$header-btn-boder-color: #ffffff
+$header-btn-boder-radius: 14px
+
+$tabs-show-more-btn: #6464e8
+$popular-topic-btn-color: #ffffff
+$news-with-pagination-btn: #999999
+
+// === MIXINS ==============================
+@mixin text-hover-underline
+  &:hover
+    text-decoration: underline
+
+@mixin fw-bold
+  font-weight: 700
+
+@mixin fw-medium
+  font-weight: 500
+
+@mixin border-light
+  border: 1px solid #eaeef2
+
+@mixin border-bottom-light
+  border-bottom: 1px solid #eaeef2
+
+@mixin border-top-light
+  border-top: 1px solid #eaeef2
