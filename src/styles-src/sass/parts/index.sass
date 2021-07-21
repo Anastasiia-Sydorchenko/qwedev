@@ -263,8 +263,9 @@
 
 .latest-news__tabs-hide-btn
   position: absolute
-  top: 25px
+  top: 50%
   right: 0
+  transform: translate(0, -50%)
   font-size: calc(12px + 2 *(100vw - 320px) / (1440 - 320))
   color: $tabs-color
   background-color: transparent
@@ -275,24 +276,28 @@
   @include border-light
 
 .latest-news__tabs-control
+  display: flex
+  height: 55px
   @include border-bottom-light
 
   .tabs__tab
+    display: block
+    width: 145px
+    white-space: nowrap
     font-size: calc(14px + 2 *(100vw - 320px) / (1440 - 320))
     background-color: transparent
-    padding-bottom: 8px
-    padding-top: 25px
     cursor: pointer
-    margin-right: 25px
     color: $tabs-color
+    margin-right: 20px
+    border-bottom: 5px solid transparent
 
     &:hover
       color: $main-text-color
-      text-shadow: 0 0 .9px #333, 0 0 .9px #333, 0 0 .9px #333
+      font-weight: 700
 
   .tabs__tab--current
     border-bottom: 5px solid $tabs-current-border-bottom-color
-    text-shadow: 0 0 .9px #333, 0 0 .9px #333, 0 0 .9px #333
+    font-weight: 700
     color: $main-text-color
 
   .tabs__tab--desktop
