@@ -219,8 +219,14 @@ hideBtn.onclick = function() {
 //DARK/LIGHT THEME
 let page = document.querySelector('.page');
 let themeButton = document.querySelector('.theme-switch-btn');
+let themeButtonDesktop = document.querySelector('.theme-switch-btn--desktop');
 
 themeButton.onclick = function() {
+  page.classList.toggle('dark-theme');
+  page.classList.toggle('light-theme');
+};
+
+themeButtonDesktop.onclick = function() {
   page.classList.toggle('dark-theme');
   page.classList.toggle('light-theme');
 };
