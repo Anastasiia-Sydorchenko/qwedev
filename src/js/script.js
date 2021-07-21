@@ -215,3 +215,12 @@ hideBtn.onclick = function() {
   showMoreBtn.classList.add('show-color');
   hideBtn.classList.add('show-pale');
 };
+
+//DARK/LIGHT THEME
+let page = document.querySelector('.page');
+let themeButton = document.querySelector('.theme-switch-btn');
+
+themeButton.onclick = function() {
+  page.classList.toggle('dark-theme');
+  page.classList.toggle('light-theme');
+};

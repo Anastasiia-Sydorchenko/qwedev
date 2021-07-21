@@ -15,7 +15,7 @@
   <link async rel="stylesheet" href="../css/main.min.css" as="style">
 </head>
 
-<body class="body">
+<body class="page light-theme">
   <header class="header">
     <div class="header-top">
       <div class="header-top-inner container">
@@ -48,6 +48,15 @@
             </svg>
           </a>
         </div>
+
+        <a class="header-top__theme-switch theme-switch-btn" href="#">
+          <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="14" cy="14" r="14" fill="white" />
+            <path
+              d="M14 6.5C9.85833 6.5 6.5 9.85833 6.5 14C6.5 18.1417 9.85833 21.5 14 21.5C18.1417 21.5 21.5 18.1417 21.5 14C21.5 13.6167 21.4667 13.2333 21.4167 12.8667C20.6 14.0083 19.2667 14.75 17.75 14.75C15.2667 14.75 13.25 12.7333 13.25 10.25C13.25 8.74167 13.9917 7.4 15.1333 6.58333C14.7667 6.53333 14.3833 6.5 14 6.5Z"
+              fill="black" />
+          </svg>                   
+        </a>
 
         <div class="header-top__burger-menu-container">
           <div class="header-top__burger-menu header-top__burger-menu-trigger">
@@ -251,7 +260,7 @@
           </svg>
         </a>
 
-        <a class="header-bottom__theme-switch" href="#">
+        <a class="header-bottom__theme-switch theme-switch-btn" href="#">
           <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
             <circle cx="14" cy="14" r="14" fill="#222222" />
             <path
@@ -1472,15 +1481,15 @@
   <section class="videos-extra-container">
     <div class="videos container">
 
-      <h2 class="section-heading">Видео h2</h2>
+      <h2 class="videos__heading section-heading">Видео h2</h2>
       <div class="videos__top">
 
         <div class="videos__top-content">
           <a class="news-title-link" href="#">
-            <h2 class="highlighted-news-heading">Сэм Хьюстон одержал первую победу в чемпионат</h2>
+            <h2 class="highlighted-news-heading videos__highlighted-news-heading">Сэм Хьюстон одержал первую победу в чемпионат</h2>
           </a>
 
-          <p class="news-main-text">Компания Global Wireless Solutions провела любопытное исследование, в рамках
+          <p class="videos__main-text news-main-text">Компания Global Wireless Solutions провела любопытное исследование, в рамках
             которого пользователям iPhone из США предлагалось ответить на некоторые вопросы, связанные с сетями связи
             пятого …</p>
           <div class="videos__top-content-stats news-stats">
@@ -1497,7 +1506,7 @@
               <span class="videos-stats__dot--desktop news-stats__dot"></span>
           </div>
 
-          <span class="videos__top-category">Новости Hardware</span>
+          <a class="videos__top-category" href="#">Новости Hardware</a>
         </div>
 
         <a class="videos__top-video-wrapper" href="#">
