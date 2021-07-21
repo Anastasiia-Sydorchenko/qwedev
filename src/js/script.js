@@ -2,36 +2,74 @@ import Swiper from 'swiper';
 import SwiperCore, { Navigation, Pagination } from 'swiper/core';
 SwiperCore.use([Navigation, Pagination]);
 
-//HEADER BURGER MENU 
-const burgerMenuButton = document.querySelector('.header-top__burger-menu');
+//HEADER BURGER MENU DESKTOP
+const burgerMenuButton = document.querySelector('.header-top__burger-menu-trigger');
 
 burgerMenuButton.onclick = function () {
-  showMobileMenu();
+  showHeaderTopBurgerMenu();
 }
 
-function showMobileMenu () {
+function showHeaderTopBurgerMenu () {
   burgerMenuButton.classList.toggle('active');
-
   const mobileMenu = document.querySelector('.header-top__burger-menu-nav');
   mobileMenu.classList.toggle('active');
-
+  const mobileMenuContainer = document.querySelector('.header-top__burger-menu-container');
+  mobileMenuContainer.classList.toggle('active');
   const body = document.querySelector('body');
   body.classList.toggle('lock');
 }
 
-//LATEST NEWS TABS 
-// Get all tabs
-let tabs_items = document.querySelectorAll(".latest-news__tabs");
+const burgerMobileMenuButton = document.querySelector('.mobile-menu-button-trigger');
 
-// Loop through all tabs
+burgerMobileMenuButton.onclick = function () {
+  showMobileMenu();
+}
+
+function showMobileMenu () {
+  const mobileMenu = document.querySelector('.header-bottom__menu');
+  mobileMenu.classList.toggle('active');
+  const mobileMenuContainer = document.querySelector('.mobile-menu-button-container');
+  mobileMenuContainer.classList.toggle('active');
+  mobileMenuContainer.querySelector('.header-top__burger-menu').classList.toggle('active');
+}
+
+//HEADER BURGER MENU DROPDOWN BUTTONS
+let dropdownButtons = document.querySelectorAll(".dropbtn");
+console.log(dropdownButtons);
+dropdownButtons.forEach(function(el) {
+  el.addEventListener('click', function(event) {
+    if (event.target.matches('.dropbtn')) {
+      el.classList.toggle("show-styles");
+      el.nextElementSibling.classList.toggle("show");
+    } else {
+      let dropdowns = document.getElementsByClassName("dropdown-content");
+      let i;
+      for (i = 0; i < dropdowns.length; i++) {
+        let openDropdown = dropdowns[i];
+        if (openDropdown.classList.contains('show')) {
+          openDropdown.classList.remove('show');
+        }
+      }
+    }
+  })
+});
+
+//TOP NEWS MOBILE SLIDER
+const topNewsMobile = new Swiper('#top-news--mobile__slider', {
+  loop: true,
+  spaceBetween: 10,
+  lazyLoading: true,
+  slidesPerView: 'auto',
+});
+
+//LATEST NEWS TABS 
+let tabs_items = document.querySelectorAll(".latest-news__tabs");
 tabs_items.forEach(function (tabs) {
-  // Set letiable
   let controls = tabs.querySelector(".latest-news__tabs-control");
   let tab = controls.querySelectorAll(".tabs__tab");
   let contents = tabs.querySelector(".latest-news__contents");
   let content = contents.querySelectorAll(".latest-news__tabs-content");
 
-  // Loop through all tabs
   tab.forEach(function (item) {
     item.onclick = function (e) {
       e.preventDefault();
@@ -66,14 +104,34 @@ tabs_items.forEach(function (tabs) {
   });
 });
 
-// LATEST BLOP NEWS SLIDER
+// LATEST BLOG NEWS SLIDER
 const latestBlogNews = new Swiper('#latest-blog-news__slider', {
   // Optional parameters
   loop: true,
   spaceBetween: 10,
   lazyLoading: true,
-  slidesPerView: 5,
+  slidesPerView: 'auto',
 
+  breakpoints: {
+    400: {
+      slidesPerView: 'auto',
+      spaceBetween: 10,
+    },
+    650: {
+      slidesPerView: 'auto',
+      spaceBetween: 10,
+    },
+    776: {
+      slidesPerView: 'auto',
+      spaceBetween: 20,
+    },
+    992: {
+      slidesPerView: 4.5,
+    },
+    1025: {
+      slidesPerView: 5,
+    },
+  },
   // If we need pagination
   pagination: {
     el: '.swiper-pagination',
@@ -111,4 +169,49 @@ for (faqQuestion of faqQuestions) {
   faqQuestion.onclick = function () {
     arrowToDown.classList.toggle('it-news__answers-arrow--active')
   };
+};
+
+//BACK TO TOP BTN
+const scrollToTopButton = document.getElementById('footer__bottom-arrow-to-top');
+
+const scrollFunc = () => {
+  let y = window.scrollY;
+  if (y > 0) {
+    scrollToTopButton.className = "top-link show";
+  } else {
+    scrollToTopButton.className = "top-link hide";
+  }
+};
+
+window.addEventListener("scroll", scrollFunc);
+
+const scrollToTop = () => {
+  const c = document.documentElement.scrollTop || document.body.scrollTop;
+  if (c > 0) {
+    window.requestAnimationFrame(scrollToTop);
+    window.scrollTo(0, c - c / 10);
+  }
+};
+
+scrollToTopButton.onclick = function(e) {
+  e.preventDefault();
+  scrollToTop();
+};
+
+//TABS SHOW/HIDE CONTENT
+const hideBtn = document.querySelector('.latest-news__tabs-hide-btn');
+const showMoreBtn = document.querySelector('.latest-news__show-more-btn');
+const extraListItems = document.querySelector('.latest-news__list-items--extra');
+
+showMoreBtn.onclick = function() {
+  extraListItems.classList.toggle('show');
+  showMoreBtn.classList.add('show-pale');
+  hideBtn.classList.add('show-color');
+};
+
+hideBtn.onclick = function() {
+  extraListItems.classList.toggle('show');
+  showMoreBtn.classList.remove('show-pale');
+  showMoreBtn.classList.add('show-color');
+  hideBtn.classList.add('show-pale');
 };
