@@ -1,9 +1,17 @@
+.body
+  margin-top: 50px
+  margin-bottom: 50px
+
 .header-top
   height: 50px
   background-color: $header-top-bg-color
   display: flex
   align-items: center
   border-bottom: 3px solid #8f89ff
+  position: fixed
+  top: 0
+  width: 100%
+  z-index: 3
 
 .header-top-inner
   position: relative
@@ -565,32 +573,35 @@
   display: none
 
 // === FOOTER ==============================
-.footer--mobile
-  display: flex
-
 .footer
+  position: fixed
+  height: 50px
+  background-color: #fff
+  bottom: 0px
+  left: 0px
+  right: 0px
   @include border-top-light
-
-.footer--mobile-wrapper
-  position: static
 
 .footer--mobile
   padding-left: 0
+  padding-top: 3px
   list-style-type: none
   display: flex
   align-items: center
   justify-content: space-between
+  align-items: end
+  margin: 0
 
 .footer--mobile__item-icon
   display: block
-  margin-bottom: 7px
+  margin-bottom: 5px
 
 .footer--mobile__item-link
   display: flex
   flex-direction: column
   align-items: center
   color: $footer--mobile__item
-  font-size: calc(10px + 5 * (100vw - 320px) / (992 - 320))
+  font-size: 10px
 
 .footer--mobile__item:hover .footer--mobile__item-link
   color: $footer--mobile__item-hover
@@ -687,6 +698,10 @@
     width: 700px
 
 @media (min-width: 992px)
+  .body
+    margin-top: 0
+    margin-bottom: 0
+
   .container
     width: 960px
 
@@ -695,6 +710,8 @@
 
   // === HEADER ==============================
   .header-top
+    position: initial
+    //top: initial
     border-bottom: 0
 
   .header-top__search
@@ -1070,7 +1087,6 @@
   .discuss-source-link
     padding: 10px
     display: block
-
 
   // === POPULAR TOPICS SECTION (ASIDE) ==============================
   .popular-topics__heading
@@ -1515,6 +1531,9 @@
     font-size: 14px
 
   // === FOOTER ==============================
+  .footer
+    position: initial
+
   .footer--mobile
     display: none
 
