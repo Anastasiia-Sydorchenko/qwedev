@@ -6,10 +6,10 @@ SwiperCore.use([Navigation, Pagination]);
 const burgerMenuButton = document.querySelector('.header-top__burger-menu-trigger');
 
 burgerMenuButton.onclick = function () {
-  showHeaderTopBurgerMenu();
+  showHeaderBurgerMenu();
 }
 
-function showHeaderTopBurgerMenu () {
+function showHeaderBurgerMenu () {
   burgerMenuButton.classList.toggle('active');
   const mobileMenu = document.querySelector('.header-top__burger-menu-nav');
   mobileMenu.classList.toggle('active');
@@ -34,25 +34,66 @@ function showMobileMenu () {
 }
 
 //HEADER BURGER MENU DROPDOWN BUTTONS
-let dropdownButtons = document.querySelectorAll(".dropbtn");
-console.log(dropdownButtons);
-dropdownButtons.forEach(function(el) {
-  el.addEventListener('click', function(event) {
-    if (event.target.matches('.dropbtn')) {
-      el.classList.toggle("show-styles");
-      el.nextElementSibling.classList.toggle("show");
-    } else {
-      let dropdowns = document.getElementsByClassName("dropdown-content");
-      let i;
-      for (i = 0; i < dropdowns.length; i++) {
-        let openDropdown = dropdowns[i];
-        if (openDropdown.classList.contains('show')) {
-          openDropdown.classList.remove('show');
-        }
-      }
+const mobileMenu = document.querySelector('.header-top__burger-menu-nav');
+const mobileMenuContainer = document.querySelector('.header-top__burger-menu-container');
+const body = document.querySelector('body');
+
+function showHeaderTopBurgerMenu () {
+  burgerMenuButton.classList.add('active');
+  mobileMenu.classList.add('active');
+  mobileMenuContainer.classList.add('active');
+  body.classList.add('lock');
+}
+
+function hideHeaderTopBurgerMenu () {
+  burgerMenuButton.classList.remove('active');
+  mobileMenu.classList.remove('active');
+  mobileMenuContainer.classList.remove('active');
+  body.classList.remove('lock');
+}
+
+
+function hideDropdowns () {
+  let dropdowns = document.getElementsByClassName("dropdown-content");
+  let i;
+  for (i = 0; i < dropdowns.length; i++) {
+    let openDropdown = dropdowns[i];
+    if (openDropdown.classList.contains('show')) {
+      openDropdown.classList.remove('show');
     }
-  })
+  }
+
+  for (i = 0; i < dropdownButtons.length; i++) {
+    let openDropdown = dropdownButtons[i];
+    if (openDropdown.classList.contains('show-styles')) {
+      openDropdown.classList.remove('show-styles');
+    }
+  }
+}
+
+let dropdownButtons = document.querySelectorAll(".dropbtn");
+
+document.addEventListener('click', function(event) {
+    if (event.target == burgerMenuButton) {
+      if (burgerMenuButton.classList.contains('active')) {
+        hideHeaderTopBurgerMenu();
+      } else {
+        showHeaderTopBurgerMenu();
+      }
+    } else {
+      hideHeaderTopBurgerMenu();
+    }
+
+  dropdownButtons.forEach(function(el) {
+      if (event.target == el) {
+        el.classList.add("show-styles");
+        el.nextElementSibling.classList.add("show");
+      } else {
+        hideDropdowns();
+      }
+  });
 });
+
 
 //TOP NEWS MOBILE SLIDER
 const topNewsMobile = new Swiper('#top-news--mobile__slider', {
@@ -276,12 +317,28 @@ themeButtonDesktop.onclick = function() {
 
 // CLOSE MODAL WINDOW BY CLICKING OUTSIDE
 const mobileMenu = document.querySelector('.header-top__burger-menu-nav');
+const mobileMenuContainer = document.querySelector('.header-top__burger-menu-container');
+const body = document.querySelector('body');
+
+function showHeaderTopBurgerMenu () {
+  burgerMenuButton.classList.add('active');
+  mobileMenu.classList.add('active');
+  mobileMenuContainer.classList.add('active');
+  body.classList.add('lock');
+}
+
+function hideHeaderTopBurgerMenu () {
+  burgerMenuButton.classList.remove('active');
+  mobileMenu.classList.remove('active');
+  mobileMenuContainer.classList.remove('active');
+  body.classList.remove('lock');
+}
 
 document.addEventListener('click', function(event) {
-  let isClickInside = mobileMenu.contains(event.target);
-
-  if (!isClickInside && !burgerMenuButton && document) {
-    mobileMenu.classList.remove('active')
+  if (event.target == burgerMenuButton) {
+    showHeaderTopBurgerMenu();
+  } else {
+    hideHeaderTopBurgerMenu();
   }
 });
 
