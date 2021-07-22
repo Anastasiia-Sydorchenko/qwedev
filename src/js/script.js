@@ -2,56 +2,39 @@ import Swiper from 'swiper';
 import SwiperCore, { Navigation, Pagination } from 'swiper/core';
 SwiperCore.use([Navigation, Pagination]);
 
-//HEADER BURGER MENU DESKTOP
 const burgerMenuButton = document.querySelector('.header-top__burger-menu-trigger');
-
-burgerMenuButton.onclick = function () {
-  showHeaderBurgerMenu();
-}
-
-function showHeaderBurgerMenu () {
-  burgerMenuButton.classList.toggle('active');
-  const mobileMenu = document.querySelector('.header-top__burger-menu-nav');
-  mobileMenu.classList.toggle('active');
-  const mobileMenuContainer = document.querySelector('.header-top__burger-menu-container');
-  mobileMenuContainer.classList.toggle('active');
-  const body = document.querySelector('body');
-  body.classList.toggle('lock');
-}
-
 const burgerMobileMenuButton = document.querySelector('.mobile-menu-button-trigger');
-
-burgerMobileMenuButton.onclick = function () {
-  showMobileMenu();
-}
-
-function showMobileMenu () {
-  const mobileMenu = document.querySelector('.header-bottom__menu');
-  mobileMenu.classList.toggle('active');
-  const mobileMenuContainer = document.querySelector('.mobile-menu-button-container');
-  mobileMenuContainer.classList.toggle('active');
-  mobileMenuContainer.querySelector('.header-top__burger-menu').classList.toggle('active');
-}
-
-//HEADER BURGER MENU DROPDOWN BUTTONS
-const mobileMenu = document.querySelector('.header-top__burger-menu-nav');
-const mobileMenuContainer = document.querySelector('.header-top__burger-menu-container');
+const topBurgerMenu = document.querySelector('.header-top__burger-menu-nav');
+const topBurgerMenuContainer = document.querySelector('.header-top__burger-menu-container');
+const mobileMenu = document.querySelector('.header-bottom__menu');
+const mobileMenuContainer = document.querySelector('.mobile-menu-button-container');
 const body = document.querySelector('body');
 
 function showHeaderTopBurgerMenu () {
   burgerMenuButton.classList.add('active');
-  mobileMenu.classList.add('active');
-  mobileMenuContainer.classList.add('active');
+  topBurgerMenu.classList.add('active');
+  topBurgerMenuContainer.classList.add('active');
   body.classList.add('lock');
 }
 
 function hideHeaderTopBurgerMenu () {
   burgerMenuButton.classList.remove('active');
-  mobileMenu.classList.remove('active');
-  mobileMenuContainer.classList.remove('active');
+  topBurgerMenu.classList.remove('active');
+  topBurgerMenuContainer.classList.remove('active');
   body.classList.remove('lock');
 }
 
+function showMobileMenu () {
+  mobileMenu.classList.add('active');
+  mobileMenuContainer.classList.add('active');
+  mobileMenuContainer.querySelector('.header-top__burger-menu').classList.add('active');
+}
+
+function hideMobileMenu () {
+  mobileMenu.classList.remove('active');
+  mobileMenuContainer.classList.remove('active');
+  mobileMenuContainer.querySelector('.header-top__burger-menu').classList.remove('active');
+}
 
 function hideDropdowns () {
   let dropdowns = document.getElementsByClassName("dropdown-content");
@@ -74,6 +57,16 @@ function hideDropdowns () {
 let dropdownButtons = document.querySelectorAll(".dropbtn");
 
 document.addEventListener('click', function(event) {
+    if (event.target == burgerMobileMenuButton) {
+      if (burgerMobileMenuButton.classList.contains('active')) {
+        hideMobileMenu();
+      } else {
+        showMobileMenu();
+      }
+    } else {
+      hideMobileMenu();
+    }
+
     if (event.target == burgerMenuButton) {
       if (burgerMenuButton.classList.contains('active')) {
         hideHeaderTopBurgerMenu();
@@ -93,7 +86,6 @@ document.addEventListener('click', function(event) {
       }
   });
 });
-
 
 //TOP NEWS MOBILE SLIDER
 const topNewsMobile = new Swiper('#top-news--mobile__slider', {
@@ -316,29 +308,5 @@ themeButtonDesktop.onclick = function() {
 };
 
 // CLOSE MODAL WINDOW BY CLICKING OUTSIDE
-const mobileMenu = document.querySelector('.header-top__burger-menu-nav');
-const mobileMenuContainer = document.querySelector('.header-top__burger-menu-container');
-const body = document.querySelector('body');
 
-function showHeaderTopBurgerMenu () {
-  burgerMenuButton.classList.add('active');
-  mobileMenu.classList.add('active');
-  mobileMenuContainer.classList.add('active');
-  body.classList.add('lock');
-}
-
-function hideHeaderTopBurgerMenu () {
-  burgerMenuButton.classList.remove('active');
-  mobileMenu.classList.remove('active');
-  mobileMenuContainer.classList.remove('active');
-  body.classList.remove('lock');
-}
-
-document.addEventListener('click', function(event) {
-  if (event.target == burgerMenuButton) {
-    showHeaderTopBurgerMenu();
-  } else {
-    hideHeaderTopBurgerMenu();
-  }
-});
 
