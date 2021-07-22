@@ -63,7 +63,7 @@
             <span class="header-top__burger-menu-lines"></span>
           </div>
 
-          <nav class="header-top__burger-menu-nav">
+          <nav class="header-top__burger-menu-nav" id="a">
             <ul class="burger-menu__list">
 
               <li class="burger-menu__list-item">
@@ -333,7 +333,7 @@
       </a>
 
       <div class="top-news-content">
-        <a href="#" class="news-category-link"><span class="top-news__category news-category">Новости
+        <a href="#" class="news-category-link"><span class="top-news__category top-news__category-software news-category">Новости
             Software</span></a>
         <a href="#" class="news-title-link">
           <h3 class="news-heading-s">Историческое событие: Samsung выпустила в России смартфон на
@@ -366,7 +366,7 @@
       </a>
 
       <div class="top-news-content">
-        <a href="#" class="news-category-link"><span class="top-news__category news-category">Новости Игр</span></a>
+        <a href="#" class="news-category-link"><span class="top-news__category top-news__category-games news-category">Новости Игр</span></a>
         <a href="#" class="news-title-link">
           <h3 class="news-heading-s">Историческое событие!</h3>
         </a>
@@ -401,7 +401,7 @@
 
   </section>
 
-  <section class="news-blocks container">
+  <section class="news-blocks container container--mobile">
     <section class="main-news-block">
 
       <div class="latest-news__tabs">
@@ -464,7 +464,7 @@
                   xmlns="http://www.w3.org/2000/svg">
                   <path
                     d="M12.1667 6.49992L11.1679 5.50117L7.20834 9.45367L7.20834 0.833252L5.79167 0.833252L5.79167 9.45367L1.83209 5.50117L0.833339 6.49992L6.50001 12.1666L12.1667 6.49992Z"
-                    fill="#6464E8" />
+                    fill="#6464e8" />
                 </svg>
               </a>
             </div>
@@ -996,7 +996,7 @@
     </aside>
   </section>
 
-  <section class="main-news-extra--mobile container">
+  <section class="main-news-extra--mobile container container--mobile">
     <div class="all-news__item">
       <a class="all-news__img-wrapper" href="#">
         <img class="img" src="../images/news-img-mobile.png" alt="">
@@ -1523,10 +1523,12 @@
             <span>18 сентября, 10:49</span>
             <span class="news-stats__dot"></span>
             <span">12 452 просмотров</span>
-              <span class="videos-stats__dot--desktop news-stats__dot"></span>
           </div>
 
-          <a class="videos__top-category" href="#">Новости Hardware</a>
+          <a class="videos__top-category" href="#">
+            <span class="videos-stats__dot news-stats__dot"></span>
+            Новости Hardware
+          </a>
         </div>
 
         <a class="videos__top-video-wrapper" href="#">

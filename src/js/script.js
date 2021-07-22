@@ -273,3 +273,15 @@ themeButtonDesktop.onclick = function() {
   page.classList.toggle('dark-theme');
   page.classList.toggle('light-theme');
 };
+
+// CLOSE MODAL WINDOW BY CLICKING OUTSIDE
+const mobileMenu = document.querySelector('.header-top__burger-menu-nav');
+
+document.addEventListener('click', function(event) {
+  let isClickInside = mobileMenu.contains(event.target);
+
+  if (!isClickInside && !burgerMenuButton && document) {
+    mobileMenu.classList.remove('active')
+  }
+});
+
