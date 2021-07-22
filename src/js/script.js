@@ -54,37 +54,27 @@ function hideDropdowns () {
   }
 }
 
-let dropdownButtons = document.querySelectorAll(".dropbtn");
-
 document.addEventListener('click', function(event) {
-    if (event.target == burgerMobileMenuButton) {
-      if (burgerMobileMenuButton.classList.contains('active')) {
-        hideMobileMenu();
-      } else {
-        showMobileMenu();
-      }
-    } else {
+  if (event.target == burgerMobileMenuButton) {
+    if (burgerMobileMenuButton.classList.contains('active')) {
       hideMobileMenu();
-    }
-
-    if (event.target == burgerMenuButton) {
-      if (burgerMenuButton.classList.contains('active')) {
-        hideHeaderTopBurgerMenu();
-      } else {
-        showHeaderTopBurgerMenu();
-      }
     } else {
-      hideHeaderTopBurgerMenu();
+      showMobileMenu();
     }
-
-  dropdownButtons.forEach(function(el) {
-      if (event.target == el) {
-        el.classList.add("show-styles");
-        el.nextElementSibling.classList.add("show");
-      } else {
-        hideDropdowns();
-      }
-  });
+  } else if (event.target == burgerMenuButton) {
+    if (burgerMenuButton.classList.contains('active')) {
+      hideHeaderTopBurgerMenu();
+    } else {
+      showHeaderTopBurgerMenu();
+    }
+  } else if (event.target.classList.contains('dropbtn')) {
+      event.target.classList.add("show-styles");
+      event.target.nextElementSibling.classList.add("show");
+  } else {
+    hideMobileMenu();
+    hideHeaderTopBurgerMenu();
+    hideDropdowns();
+  }
 });
 
 //TOP NEWS MOBILE SLIDER
