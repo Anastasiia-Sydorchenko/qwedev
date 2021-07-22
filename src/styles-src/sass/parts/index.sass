@@ -274,6 +274,7 @@
   color: $tabs-color
   background-color: transparent
   cursor: pointer
+  display: none
 
 .latest-news__tabs
   padding: 5px 15px
@@ -336,6 +337,7 @@
   background-color: transparent
   font-size: calc(14px + 2 *(100vw - 320px) / (1440 - 320))
   cursor: pointer
+  display: none
 
   .arrow-to-down-2
     vertical-align: middle
@@ -623,15 +625,7 @@
   display: none
 
 .show
-  display: block
-
-.latest-news__show-more-btn.show-color,
-.latest-news__tabs-hide-btn.show-color
-  color: #6464e8
-
-.latest-news__show-more-btn.show-pale,
-.latest-news__tabs-hide-btn.show-pale
-  color: #777777
+  display: block !important
 
   .arrow-to-down-2 path 
     fill: #777777

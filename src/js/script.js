@@ -199,21 +199,64 @@ scrollToTopButton.onclick = function(e) {
 };
 
 //TABS SHOW/HIDE CONTENT
-const hideBtn = document.querySelector('.latest-news__tabs-hide-btn');
-const showMoreBtn = document.querySelector('.latest-news__show-more-btn');
-const extraListItems = document.querySelector('.latest-news__list-items--extra');
+const hideBtn1 = document.querySelector('.latest-news__tabs-hide-btn1');
+const hideBtn2 = document.querySelector('.latest-news__tabs-hide-btn2');
+const hideBtn3 = document.querySelector('.latest-news__tabs-hide-btn3');
 
-showMoreBtn.onclick = function() {
-  extraListItems.classList.toggle('show');
-  showMoreBtn.classList.add('show-pale');
-  hideBtn.classList.add('show-color');
+const showMoreBtn1 = document.querySelector('.latest-news__show-more-btn1');
+const showMoreBtn2 = document.querySelector('.latest-news__show-more-btn2');
+const showMoreBtn3 = document.querySelector('.latest-news__show-more-btn3');
+
+const extraListItems1 = document.querySelector('.latest-news__list-items--extra1');
+const extraListItems2 = document.querySelector('.latest-news__list-items--extra2');
+const extraListItems3 = document.querySelector('.latest-news__list-items--extra3');
+
+function toggleExtraListItems1() {
+  hideBtn1.classList.toggle('show');
+  extraListItems1.classList.toggle('show');
+  showMoreBtn1.classList.toggle('show');
+}
+
+showMoreBtn1.onclick = function(e) {
+  toggleExtraListItems1();
+  e.preventDefault();
 };
 
-hideBtn.onclick = function() {
-  extraListItems.classList.toggle('show');
-  showMoreBtn.classList.remove('show-pale');
-  showMoreBtn.classList.add('show-color');
-  hideBtn.classList.add('show-pale');
+hideBtn1.onclick = function(e) {
+  toggleExtraListItems1();
+  e.preventDefault();
+};
+
+function toggleExtraListItems2() {
+  hideBtn2.classList.toggle('show');
+  extraListItems2.classList.toggle('show');
+  showMoreBtn2.classList.toggle('show');
+}
+
+showMoreBtn2.onclick = function(e) {
+  toggleExtraListItems2();
+  e.preventDefault();
+};
+
+hideBtn2.onclick = function(e) {
+  toggleExtraListItems2();
+  e.preventDefault();
+};
+
+function toggleExtraListItems3() {
+  hideBtn3.classList.toggle('show');
+  extraListItems3.classList.toggle('show');
+  showMoreBtn3.classList.toggle('show');
+}
+
+showMoreBtn3.onclick = function(e) {
+  toggleExtraListItems3();
+  e.preventDefault();
+};
+
+hideBtn3.onclick = function(e) {
+  toggleExtraListItems3();
+  e.preventDefault();
 };
 
 //DARK/LIGHT THEME
