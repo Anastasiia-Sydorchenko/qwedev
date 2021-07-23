@@ -414,9 +414,17 @@
 
 // === POPULAR TOPIC SECTION ==============================
 .popular-topic
-  background-image: url('../images/popular-topic-bg.png')
   background-size: cover
   padding: 20px 15px
+
+.webp .popular-topic
+  background-image: url('../images/popular-topic-bg.webp')
+
+.jpeg2000 .popular-topic
+  background-image: url('../images/popular-topic-bg.jp2')
+
+.no-webp.no-jpeg2000 .popular-topic
+  background-image: url('../images/popular-topic-bg.png')
 
 .popular-topic__label
   display: inline-block
