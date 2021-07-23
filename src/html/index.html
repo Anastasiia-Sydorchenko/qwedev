@@ -127,8 +127,8 @@
           </nav>
         </div>
 
-        <div class="mobile-menu-button-container mobile-menu-button-trigger">
-          <div class="header-top__burger-menu">
+        <div class="mobile-menu-button-container">
+          <div class="header-top__burger-menu mobile-menu-button-trigger">
             <span class="header-top__burger-menu-lines"></span>
           </div>
         </div>
@@ -142,8 +142,8 @@
     </div>
 
     <div class="header-bottom">
-      <div class="header-bottom-inner header-bottom-inner--mobile container">
-        <nav class="header-bottom__menu container">
+      <div class="header-bottom-inner header-bottom-inner--mobile">
+        <nav class="header-bottom__menu">
           <ul class="header-bottom__menu-list">
             <li>
               <a class="header-bottom__menu-list-item dropbtn" href="#">Новости
@@ -282,7 +282,7 @@
           <picture>
             <source type="image/webp" srcset="../images/top-content-img.webp">
             <source type="image/jp2" srcset="../images/top-content-img.jp2">
-            <img class="img" src="../images/top-content-img.png" alt="">
+            <img loading="lazy" class="img" src="../images/top-content-img.png" alt="">
           </picture>
         </div>
         
@@ -322,7 +322,7 @@
         <picture>
           <source type="image/webp" srcset="../images/news-1.webp">
           <source type="image/jp2" srcset="../images/news-1.jp2">
-          <img class="img" src="../images/news-1.png" alt="">
+          <img loading="lazy" class="img" src="../images/news-1.png" alt="">
         </picture>
       </a>
 
@@ -343,7 +343,7 @@
         <picture>
           <source type="image/webp" srcset="../images/news-2.webp">
           <source type="image/jp2" srcset="../images/news-2.jp2">
-          <img class="img" src="../images/news-2.png" alt="">
+          <img loading="lazy" class="img" src="../images/news-2.png" alt="">
         </picture>
       </a>
 
@@ -364,7 +364,7 @@
         <picture>
           <source type="image/webp" srcset="../images/news-3.webp">
           <source type="image/jp2" srcset="../images/news-3.jp2">
-          <img class="img" src="../images/news-3.png" alt="">
+          <img loading="lazy" class="img" src="../images/news-3.png" alt="">
         </picture>
       </a>
 
@@ -384,7 +384,7 @@
         <picture>
           <source type="image/webp" srcset="../images/news-4.webp">
           <source type="image/jp2" srcset="../images/news-4.jp2">
-          <img class="img" src="../images/news-4.png" alt="">
+          <img loading="lazy" class="img" src="../images/news-4.png" alt="">
         </picture>
       </a>
 
@@ -409,7 +409,7 @@
             <picture>
               <source type="image/webp" srcset="../images/top-news-item-mob-1.webp">
               <source type="image/jp2" srcset="../images/top-news-item-mob-1.jp2">
-              <img class="img" src="../images/top-news-item-mob-1.png" alt="">
+              <img loading="lazy" class="img" src="../images/top-news-item-mob-1.png" alt="">
             </picture>
           </a>
           <span class="top-news-item--mobile__text">Историческое событие: Samsung выпустила в России смартфон на основе
@@ -421,7 +421,7 @@
             <picture>
               <source type="image/webp" srcset="../images/top-news-item-mob-1.webp">
               <source type="image/jp2" srcset="../images/top-news-item-mob-1.jp2">
-              <img class="img" src="../images/top-news-item-mob-1.png" alt="">
+              <img loading="lazy" class="img" src="../images/top-news-item-mob-1.png" alt="">
             </picture>
           </a>
           <h2 class="top-news-item--mobile__text">Cмартфон на основе SoC Snapdragon 865</h2>
@@ -596,8 +596,14 @@
 
         <div class="all-news__item">
           <a class="all-news__img-wrapper" href="#">
-            <img class="img" srcset="../images/all-news-1.png 255w, ../images/news-img-mobile.png 320w"
+            <picture>
+              <source type="image/webp" srcset="../images/all-news-1.webp 255w, ../images/news-img-mobile.webp 320w"
+              sizes="(min-width: 768px) 255px, (max-width: 767px) 320px" src="../images/all-news-1.webp" alt="">
+              <source type="image/jp2" srcset="../images/all-news-1.jp2 255w, ../images/news-img-mobile.jp2 320w"
+              sizes="(min-width: 768px) 255px, (max-width: 767px) 320px" src="../images/all-news-1.jp2" alt="">
+              <img loading="lazy" class="img" srcset="../images/all-news-1.png 255w, ../images/news-img-mobile.png 320w"
               sizes="(min-width: 768px) 255px, (max-width: 767px) 320px" src="../images/all-news-1.png" alt="">
+            </picture>
           </a>
 
           <div class="all-news__content">
@@ -627,8 +633,14 @@
 
         <div class="all-news__item">
           <a class="all-news__img-wrapper" href="#">
-            <img class="img" srcset="../images/all-news-2.png 255w, ../images/news-img-mobile.png 320w"
+            <picture>
+              <source type="image/webp" srcset="../images/all-news-2.webp 255w, ../images/news-img-mobile.webp 320w"
+              sizes="(min-width: 768px) 255px, (max-width: 767px) 320px" src="../images/all-news-1.webp" alt="">
+              <source type="image/jp2" srcset="../images/all-news-2.jp2 255w, ../images/news-img-mobile.jp2 320w"
+              sizes="(min-width: 768px) 255px, (max-width: 767px) 320px" src="../images/all-news-1.jp2" alt="">
+              <img loading="lazy" class="img" srcset="../images/all-news-2.png 255w, ../images/news-img-mobile.png 320w"
               sizes="(min-width: 768px) 255px, (max-width: 767px) 320px" src="../images/all-news-1.png" alt="">
+            </picture>
           </a>
 
           <div class="all-news__content">
@@ -657,8 +669,14 @@
 
         <div class="all-news__item">
           <a class="all-news__img-wrapper" href="#">
-            <img class="img" srcset="../images/all-news-3.png 255w, ../images/news-img-mobile.png 320w"
+            <picture>
+              <source type="image/webp" srcset="../images/all-news-3.webp 255w, ../images/news-img-mobile.webp 320w"
+              sizes="(min-width: 768px) 255px, (max-width: 767px) 320px" src="../images/all-news-1.webp" alt="">
+              <source type="image/jp2" srcset="../images/all-news-3.jp2 255w, ../images/news-img-mobile.jp2 320w"
+              sizes="(min-width: 768px) 255px, (max-width: 767px) 320px" src="../images/all-news-1.jp2" alt="">
+              <img loading="lazy" class="img" srcset="../images/all-news-3.png 255w, ../images/news-img-mobile.png 320w"
               sizes="(min-width: 768px) 255px, (max-width: 767px) 320px" src="../images/all-news-1.png" alt="">
+            </picture>
           </a>
 
           <div class="all-news__content">
@@ -687,8 +705,14 @@
 
         <div class="all-news__item">
           <a class="all-news__img-wrapper">
-            <img class="img" srcset="../images/all-news-4.png 255w, ../images/news-img-mobile.png 320w"
-              sizes="(min-width: 768px) 255px, (max-width: 767px) 320px" src="../images/all-news-1.png" alt="">
+            <picture>
+              <source type="image/webp" srcset="../images/all-news-4.webp 255w, ../images/news-img-mobile.webp 320w"
+              sizes="(min-width: 768px) 255px, (max-width: 767px) 320px" src="../images/all-news-1.webp" alt="">
+              <source type="image/jp2" srcset="../images/all-news-4.jp2 255w, ../images/news-img-mobile.jp2 320w"
+              sizes="(min-width: 768px) 255px, (max-width: 767px) 320px" src="../images/all-news-1.jp2" alt="">
+              <img loading="lazy" class="img" srcset="../images/all-news-4.png 255w, ../images/news-img-mobile.png 320w"
+                sizes="(min-width: 768px) 255px, (max-width: 767px) 320px" src="../images/all-news-1.png" alt="">
+            </picture>
           </a>
 
           <div class="all-news__content">
@@ -720,7 +744,7 @@
             <picture>
               <source type="image/webp" srcset="../images/all-news-5.webp">
               <source type="image/jp2" srcset="../images/all-news-5.jp2">
-              <img class="img" src="../images/all-news-5.png" alt="">
+              <img loading="lazy" class="img" src="../images/all-news-5.png" alt="">
             </picture>
           </a>
 
@@ -747,7 +771,7 @@
             <picture>
               <source type="image/webp" srcset="../images/all-news-6.webp">
               <source type="image/jp2" srcset="../images/all-news-6.jp2">
-              <img class="img" src="../images/all-news-6.png" alt="">
+              <img loading="lazy" class="img" src="../images/all-news-6.png" alt="">
             </picture>
           </a>
 
@@ -773,7 +797,7 @@
             <picture>
               <source type="image/webp" srcset="../images/all-news-7.webp">
               <source type="image/jp2" srcset="../images/all-news-7.jp2">
-              <img class="img" src="../images/all-news-7.png" alt="">
+              <img loading="lazy" class="img" src="../images/all-news-7.png" alt="">
             </picture>
           </a>
 
@@ -799,7 +823,7 @@
             <picture>
               <source type="image/webp" srcset="../images/all-news-6.webp">
               <source type="image/jp2" srcset="../images/all-news-6.jp2">
-              <img class="img" src="../images/all-news-6.png" alt="">
+              <img loading="lazy" class="img" src="../images/all-news-6.png" alt="">
             </picture>
           </a>
 
@@ -825,7 +849,7 @@
             <picture>
               <source type="image/webp" srcset="../images/all-news-7.webp">
               <source type="image/jp2" srcset="../images/all-news-7.jp2">
-              <img class="img" src="../images/all-news-7.png" alt="">
+              <img loading="lazy" class="img" src="../images/all-news-7.png" alt="">
             </picture>
           </a>
 
@@ -890,7 +914,7 @@
               <picture>
                 <source type="image/webp" srcset="../images/popular-news-1.webp">
                 <source type="image/jp2" srcset="../images/popular-news-1.jp2">
-                <img class="img" src="../images/popular-news-1.png" alt="">
+                <img loading="lazy" class="img" src="../images/popular-news-1.png" alt="">
               </picture>
             </a>
 
@@ -908,7 +932,7 @@
               <picture>
                 <source type="image/webp" srcset="../images/popular-news-2.webp">
                 <source type="image/jp2" srcset="../images/popular-news-2.jp2">
-                <img class="img" src="../images/popular-news-2.png" alt="">
+                <img loading="lazy" class="img" src="../images/popular-news-2.png" alt="">
               </picture>
             </a>
 
@@ -925,7 +949,7 @@
               <picture>
                 <source type="image/webp" srcset="../images/popular-news-3.webp">
                 <source type="image/jp2" srcset="../images/popular-news-3.jp2">
-                <img class="img" src="../images/popular-news-3.png" alt="">
+                <img loading="lazy" class="img" src="../images/popular-news-3.png" alt="">
               </picture>
             </a>
 
@@ -942,7 +966,7 @@
               <picture>
                 <source type="image/webp" srcset="../images/popular-news-4.webp">
                 <source type="image/jp2" srcset="../images/popular-news-4.jp2">
-                <img class="img" src="../images/popular-news-4.png" alt="">
+                <img loading="lazy" class="img" src="../images/popular-news-4.png" alt="">
               </picture>
             </a>
 
@@ -959,7 +983,7 @@
               <picture>
                 <source type="image/webp" srcset="../images/popular-news-5.webp">
                 <source type="image/jp2" srcset="../images/popular-news-5.jp2">
-                <img class="img" src="../images/popular-news-5.png" alt="">
+                <img loading="lazy" class="img" src="../images/popular-news-5.png" alt="">
               </picture>
             </a>
 
@@ -985,7 +1009,7 @@
                 <picture>
                   <source type="image/webp" srcset="../images/user-1.webp">
                   <source type="image/jp2" srcset="../images/user-1.jp2">
-                  <img class="img" src="../images/user-1.png" alt="">
+                  <img loading="lazy" class="img" src="../images/user-1.png" alt="">
                 </picture>
               </a>
               <a class="user-name-link" href="#"><span class="discuss-news__user-name">Платон Щукин</span></a>
@@ -1006,7 +1030,7 @@
                 <picture>
                   <source type="image/webp" srcset="../images/user-2.webp">
                   <source type="image/jp2" srcset="../images/user-2.jp2">
-                  <img class="img" src="../images/user-2.png" alt="">
+                  <img loading="lazy" class="img" src="../images/user-2.png" alt="">
                 </picture>
               </a>
               <a class="user-name-link" href="#"><span class="discuss-news__user-name">Платон Мегакиллеровы</span></a>
@@ -1028,7 +1052,7 @@
                 <picture>
                   <source type="image/webp" srcset="../images/user-3.webp">
                   <source type="image/jp2" srcset="../images/user-3.jp2">
-                  <img class="img" src="../images/user-3.png" alt="">
+                  <img loading="lazy" class="img" src="../images/user-3.png" alt="">
                 </picture>
               </a>
               <a class="user-name-link" href="#"><span class="discuss-news__user-name">Платон Щукин</span></a>
@@ -1085,7 +1109,7 @@
         <picture>
           <source type="image/webp" srcset="../images/news-img-mobile.webp">
           <source type="image/jp2" srcset="../images/news-img-mobile.jp2">
-          <img class="img" src="../images/news-img-mobile.png" alt="">
+          <img loading="lazy" class="img" src="../images/news-img-mobile.png" alt="">
         </picture>
       </a>
 
@@ -1117,9 +1141,9 @@
     <div class="all-news__item">
       <a class="all-news__img-wrapper" href="#">
         <picture>
-          <source type="image/webp" srcset="../images/news-img-mobile.webp">
-          <source type="image/jp2" srcset="../images/news-img-mobile.jp2">
-          <img class="img" src="../images/news-img-mobile.png" alt="">
+          <source type="image/webp" srcset="../images/news-img-mobile-2.webp">
+          <source type="image/jp2" srcset="../images/news-img-mobile-2.jp2">
+          <img loading="lazy" class="img" src="../images/news-img-mobile-2.png" alt="">
         </picture>
       </a>
 
@@ -1162,7 +1186,7 @@
           <picture>
             <source type="image/webp" srcset="../images/news-with-pagination-1.webp">
             <source type="image/jp2" srcset="../images/news-with-pagination-1.jp2">
-            <img class="img" src="../images/news-with-pagination-1.png" alt="">
+            <img loading="lazy" class="img" src="../images/news-with-pagination-1.png" alt="">
           </picture>
           <div class="news-with-pagination__img-wrapper-gradient"></div>
           <div class="news-with-pagination__category">
@@ -1191,7 +1215,7 @@
           <picture>
             <source type="image/webp" srcset="../images/news-with-pagination-2.webp">
             <source type="image/jp2" srcset="../images/news-with-pagination-2.jp2">
-            <img class="img" src="../images/news-with-pagination-2.png" alt="">
+            <img loading="lazy" class="img" src="../images/news-with-pagination-2.png" alt="">
           </picture>
           <div class="news-with-pagination__img-wrapper-gradient"></div>
           <div class="news-with-pagination__category">
@@ -1218,9 +1242,9 @@
 
         <a class="news-with-pagination__img-wrapper" href="#">
           <picture>
-            <source type="image/webp" srcset="../images/hardware-news-3.webp">
-            <source type="image/jp2" srcset="../images/hardware-news-3.jp2">
-            <img class="img" src="../images/hardware-news-3.png" alt="">
+            <source type="image/webp" srcset="../images/news-with-pagination-3.webp">
+            <source type="image/jp2" srcset="../images/news-with-pagination-3.jp2">
+            <img loading="lazy" class="img" src="../images/news-with-pagination-3.png" alt="">
           </picture>
           <div class="news-with-pagination__img-wrapper-gradient"></div>
           <div class="news-with-pagination__category">
@@ -1250,7 +1274,7 @@
           <picture>
             <source type="image/webp" srcset="../images/news-with-pagination-4.webp">
             <source type="image/jp2" srcset="../images/news-with-pagination-4.jp2">
-            <img class="img" src="../images/news-with-pagination-4.png" alt="">
+            <img loading="lazy" class="img" src="../images/news-with-pagination-4.png" alt="">
           </picture>
           <div class="news-with-pagination__img-wrapper-gradient"></div>
           <div class="news-with-pagination__category">
@@ -1280,7 +1304,7 @@
           <picture>
             <source type="image/webp" srcset="../images/news-with-pagination-5.webp">
             <source type="image/jp2" srcset="../images/news-with-pagination-5.jp2">
-            <img class="img" src="../images/news-with-pagination-5.png" alt="">
+            <img loading="lazy" class="img" src="../images/news-with-pagination-5.png" alt="">
           </picture>
           <div class="news-with-pagination__img-wrapper-gradient"></div>
           <div class="news-with-pagination__category">
@@ -1310,7 +1334,7 @@
           <picture>
             <source type="image/webp" srcset="../images/news-with-pagination-6.webp">
             <source type="image/jp2" srcset="../images/news-with-pagination-6.jp2">
-            <img class="img" src="../images/news-with-pagination-6.png" alt="">
+            <img loading="lazy" class="img" src="../images/news-with-pagination-6.png" alt="">
           </picture>
           <div class="news-with-pagination__img-wrapper-gradient"></div>
           <div class="news-with-pagination__category">
@@ -1382,7 +1406,7 @@
             <picture>
               <source type="image/webp" srcset="../images/hardware-news-1.webp">
               <source type="image/jp2" srcset="../images/hardware-news-1.jp2">
-              <img class="img" src="../images/hardware-news-1.png" alt="">
+              <img loading="lazy" class="img" src="../images/hardware-news-1.png" alt="">
             </picture>
           </a>
           <a class="news-category-link" href="#"><span class="news-category__item-subcategory">Процессоры</span></a>
@@ -1395,7 +1419,7 @@
             <picture>
               <source type="image/webp" srcset="../images/hardware-news-2.webp">
               <source type="image/jp2" srcset="../images/hardware-news-2.jp2">
-              <img class="img" src="../images/hardware-news-2.png" alt="">
+              <img loading="lazy" class="img" src="../images/hardware-news-2.png" alt="">
             </picture>
           </a>
           <a class="news-category-link" href="#"><span class="news-category__item-subcategory">Видеокарты</span></a>
@@ -1409,7 +1433,7 @@
             <picture>
               <source type="image/webp" srcset="../images/hardware-news-3.webp">
               <source type="image/jp2" srcset="../images/hardware-news-3.jp2">
-              <img class="img" src="../images/hardware-news-3.png" alt="">
+              <img loading="lazy" class="img" src="../images/hardware-news-3.png" alt="">
             </picture>
           </a>
           <a class="news-category-link" href="#"><span class="news-category__item-subcategory">Оперативная
@@ -1423,7 +1447,7 @@
             <picture>
               <source type="image/webp" srcset="../images/hardware-news-4.webp">
               <source type="image/jp2" srcset="../images/hardware-news-4.jp2">
-              <img class="img" src="../images/hardware-news-4.png" alt="">
+              <img loading="lazy" class="img" src="../images/hardware-news-4.png" alt="">
             </picture>
           </a>
           <a class="news-category-link" href="#"><span class="news-category__item-subcategory">Системы
@@ -1448,7 +1472,7 @@
             <picture>
               <source type="image/webp" srcset="../images/software-news-1.webp">
               <source type="image/jp2" srcset="../images/software-news-1.jp2">
-              <img class="img" src="../images/software-news-1.png" alt="">
+              <img loading="lazy" class="img" src="../images/software-news-1.png" alt="">
             </picture>
           </a>
           <a class="news-category-link" href="#"><span class="news-category__item-subcategory">Операционные
@@ -1462,7 +1486,7 @@
             <picture>
               <source type="image/webp" srcset="../images/software-news-2.webp">
               <source type="image/jp2" srcset="../images/software-news-2.jp2">
-              <img class="img" src="../images/software-news-2.png" alt="">
+              <img loading="lazy" class="img" src="../images/software-news-2.png" alt="">
             </picture>
           </a>
           <a class="news-category-link" href="#"><span class="news-category__item-subcategory">Защита
@@ -1476,7 +1500,7 @@
             <picture>
               <source type="image/webp" srcset="../images/software-news-3.webp">
               <source type="image/jp2" srcset="../images/software-news-3.jp2">
-              <img class="img" src="../images/software-news-3.png" alt="">
+              <img loading="lazy" class="img" src="../images/software-news-3.png" alt="">
             </picture>
           </a>
           <a class="news-category-link" href="#"><span class="news-category__item-subcategory">Поисковые системы
@@ -1490,7 +1514,7 @@
             <picture>
               <source type="image/webp" srcset="../images/software-news-4.webp">
               <source type="image/jp2" srcset="../images/software-news-4.jp2">
-              <img class="img" src="../images/software-news-4.png" alt="">
+              <img loading="lazy" class="img" src="../images/software-news-4.png" alt="">
             </picture>
           </a>
           <a class="news-category-link" href="#"><span class="news-category__item-subcategory">Операционные
@@ -1514,7 +1538,7 @@
             <picture>
               <source type="image/webp" srcset="../images/exhibition-news-1.webp">
               <source type="image/jp2" srcset="../images/exhibition-news-1.jp2">
-              <img class="img" src="../images/exhibition-news-1.png" alt="">
+              <img loading="lazy" class="img" src="../images/exhibition-news-1.png" alt="">
             </picture>
           </a>
           <a class="news-category-link" href="#"><span class="news-category__item-subcategory">CES 2014</span></a>
@@ -1526,7 +1550,7 @@
             <picture>
               <source type="image/webp" srcset="../images/exhibition-news-2.webp">
               <source type="image/jp2" srcset="../images/exhibition-news-2.jp2">
-              <img class="img" src="../images/exhibition-news-2.png" alt="">
+              <img loading="lazy" class="img" src="../images/exhibition-news-2.png" alt="">
             </picture>
           </a>
           <a class="news-category-link" href="#"><span class="news-category__item-subcategory">CES 2014</span></a>
@@ -1539,7 +1563,7 @@
             <picture>
               <source type="image/webp" srcset="../images/exhibition-news-3.webp">
               <source type="image/jp2" srcset="../images/exhibition-news-3.jp2">
-              <img class="img" src="../images/exhibition-news-3.png" alt="">
+              <img loading="lazy" class="img" src="../images/exhibition-news-3.png" alt="">
             </picture>
           </a>
           <a class="news-category-link" href="#"><span class="news-category__item-subcategory">CES 2014</span></a>
@@ -1552,7 +1576,7 @@
             <picture>
               <source type="image/webp" srcset="../images/exhibition-news-4.webp">
               <source type="image/jp2" srcset="../images/exhibition-news-4.jp2">
-              <img class="img" src="../images/exhibition-news-4.png" alt="">
+              <img loading="lazy" class="img" src="../images/exhibition-news-4.png" alt="">
             </picture>
           </a>
           <a class="news-category-link" href="#"><span class="news-category__item-subcategory">CES 2014</span></a>
@@ -1576,7 +1600,7 @@
             <picture>
               <source type="image/webp" srcset="../images/reviews-news-1.webp">
               <source type="image/jp2" srcset="../images/reviews-news-1.jp2">
-              <img class="img" src="../images/reviews-news-1.png" alt="">
+              <img loading="lazy" class="img" src="../images/reviews-news-1.png" alt="">
             </picture>
           </a>
           <a class="news-category-link" href="#"><span class="news-category__item-subcategory">CES 2014</span></a>
@@ -1588,7 +1612,7 @@
             <picture>
               <source type="image/webp" srcset="../images/reviews-news-2.webp">
               <source type="image/jp2" srcset="../images/reviews-news-2.jp2">
-              <img class="img" src="../images/reviews-news-2.png" alt="">
+              <img loading="lazy" class="img" src="../images/reviews-news-2.png" alt="">
             </picture>
           </a>
           <a class="news-category-link" href="#"><span class="news-category__item-subcategory">CES 2014</span></a>
@@ -1601,7 +1625,7 @@
             <picture>
               <source type="image/webp" srcset="../images/reviews-news-3.webp">
               <source type="image/jp2" srcset="../images/reviews-news-3.jp2">
-              <img class="img" src="../images/reviews-news-3.png" alt="">
+              <img loading="lazy" class="img" src="../images/reviews-news-3.png" alt="">
             </picture>
           </a>
           <a class="news-category-link" href="#"><span class="news-category__item-subcategory">CES 2014</span></a>
@@ -1614,7 +1638,7 @@
             <picture>
               <source type="image/webp" srcset="../images/reviews-news-4.webp">
               <source type="image/jp2" srcset="../images/reviews-news-4.jp2">
-              <img class="img" src="../images/reviews-news-4.png" alt="">
+              <img loading="lazy" class="img" src="../images/reviews-news-4.png" alt="">
             </picture>
           </a>
           <a class="news-category-link" href="#"><span class="news-category__item-subcategory">CES 2014</span></a>
@@ -1638,7 +1662,7 @@
             <picture>
               <source type="image/webp" srcset="../images/new-videos-1.webp">
               <source type="image/jp2" srcset="../images/new-videos-1.jp2">
-              <img class="img" src="../images/new-videos-1.png" alt="">
+              <img loading="lazy" class="img" src="../images/new-videos-1.png" alt="">
             </picture>
           </a>
           <a class="news-category-link" href="#"><span class="news-category__item-subcategory">CES 2014</span></a>
@@ -1650,7 +1674,7 @@
             <picture>
               <source type="image/webp" srcset="../images/new-videos-2.webp">
               <source type="image/jp2" srcset="../images/new-videos-2.jp2">
-              <img class="img" src="../images/new-videos-2.png" alt="">
+              <img loading="lazy" class="img" src="../images/new-videos-2.png" alt="">
             </picture>
           </a>
           <a class="news-category-link" href="#"><span class="news-category__item-subcategory">CES 2014</span></a>
@@ -1663,7 +1687,7 @@
             <picture>
               <source type="image/webp" srcset="../images/new-videos-3.webp">
               <source type="image/jp2" srcset="../images/new-videos-3.jp2">
-              <img class="img" src="../images/new-videos-3.png" alt="">
+              <img loading="lazy" class="img" src="../images/new-videos-3.png" alt="">
             </picture>
           </a>
           <a class="news-category-link" href="#"><span class="news-category__item-subcategory">CES 2014</span></a>
@@ -1676,7 +1700,7 @@
             <picture>
               <source type="image/webp" srcset="../images/new-videos-4.webp">
               <source type="image/jp2" srcset="../images/new-videos-4.jp2">
-              <img class="img" src="../images/new-videos-4.png" alt="">
+              <img loading="lazy" class="img" src="../images/new-videos-4.png" alt="">
             </picture>
           </a>
           <a class="news-category-link" href="#"><span class="news-category__item-subcategory">CES 2014</span></a>
@@ -1724,7 +1748,7 @@
           <picture>
             <source type="image/webp" srcset="../images/video-1.webp">
             <source type="image/jp2" srcset="../images/video-1.jp2">
-            <img class="img" src="../images/video-1.png" alt="">
+            <img loading="lazy" class="img" src="../images/video-1.png" alt="">
           </picture>
           <svg class="play-circle" width="128" height="128" viewBox="0 0 128 128" fill="none"
             xmlns="http://www.w3.org/2000/svg">
@@ -1744,7 +1768,7 @@
             <picture>
               <source type="image/webp" srcset="../images/video-2.webp">
               <source type="image/jp2" srcset="../images/video-2.jp2">
-              <img class="img" src="../images/video-2.png" alt="">
+              <img loading="lazy" class="img" src="../images/video-2.png" alt="">
             </picture>
             <svg class="play-circle" width="98" height="98" viewBox="0 0 128 128" fill="none"
               xmlns="http://www.w3.org/2000/svg">
@@ -1765,7 +1789,7 @@
             <picture>
               <source type="image/webp" srcset="../images/video-3.webp">
               <source type="image/jp2" srcset="../images/video-3.jp2">
-              <img class="img" src="../images/video-3.png" alt="">
+              <img loading="lazy" class="img" src="../images/video-3.png" alt="">
             </picture>
             <svg class="play-circle width=" 98" height="98" viewBox="0 0 128 128" fill="none"
               xmlns="http://www.w3.org/2000/svg">
@@ -1785,7 +1809,7 @@
             <picture>
               <source type="image/webp" srcset="../images/video-4.webp">
               <source type="image/jp2" srcset="../images/video-4.jp2">
-              <img class="img" src="../images/video-4.png" alt="">
+              <img loading="lazy" class="img" src="../images/video-4.png" alt="">
             </picture>
             <svg class="play-circle" width="98" height="98" viewBox="0 0 128 128" fill="none"
               xmlns="http://www.w3.org/2000/svg">
@@ -1805,7 +1829,7 @@
             <picture>
               <source type="image/webp" srcset="../images/video-5.webp">
               <source type="image/jp2" srcset="../images/video-5.jp2">
-              <img class="img" src="../images/video-5.png" alt="">
+              <img loading="lazy" class="img" src="../images/video-5.png" alt="">
             </picture>
             <svg class="play-circle" width="98" height="98" viewBox="0 0 128 128" fill="none"
               xmlns="http://www.w3.org/2000/svg">
@@ -1826,7 +1850,7 @@
             <picture>
               <source type="image/webp" srcset="../images/video-6.webp">
               <source type="image/jp2" srcset="../images/video-6.jp2">
-              <img class="img" src="../images/video-6.png" alt="">
+              <img loading="lazy" class="img" src="../images/video-6.png" alt="">
             </picture>
             <svg class="play-circle" width="98" height="98" viewBox="0 0 128 128" fill="none"
               xmlns="http://www.w3.org/2000/svg">
@@ -1847,7 +1871,7 @@
             <picture>
               <source type="image/webp" srcset="../images/video-7.webp">
               <source type="image/jp2" srcset="../images/video-7.jp2">
-              <img class="img" src="../images/video-7.png" alt="">
+              <img loading="lazy" class="img" src="../images/video-7.png" alt="">
             </picture>
             <svg class="play-circle" width="98" height="98" viewBox="0 0 128 128" fill="none"
               xmlns="http://www.w3.org/2000/svg">
@@ -1867,7 +1891,7 @@
             <picture>
               <source type="image/webp" srcset="../images/video-8.webp">
               <source type="image/jp2" srcset="../images/video-8.jp2">
-              <img class="img" src="../images/video-8.png" alt="">
+              <img loading="lazy" class="img" src="../images/video-8.png" alt="">
             </picture>
             <svg class="play-circle" width="98" height="98" viewBox="0 0 128 128" fill="none"
               xmlns="http://www.w3.org/2000/svg">
@@ -1887,7 +1911,7 @@
             <picture>
               <source type="image/webp" srcset="../images/video-9.webp">
               <source type="image/jp2" srcset="../images/video-9.jp2">
-              <img class="img" src="../images/video-9.png" alt="">
+              <img loading="lazy" class="img" src="../images/video-9.png" alt="">
             </picture>
             <svg class="play-circle" width="98" height="98" viewBox="0 0 128 128" fill="none"
               xmlns="http://www.w3.org/2000/svg">
@@ -1926,7 +1950,7 @@
             <picture>
               <source type="image/webp" srcset="../images/blog-article-1.webp">
               <source type="image/jp2" srcset="../images/blog-article-1.jp2">
-              <img class="img" src="../images/blog-article-1.png" alt="">
+              <img loading="lazy" class="img" src="../images/blog-article-1.png" alt="">
             </picture>
           </a>
 
@@ -1944,7 +1968,7 @@
             <picture>
               <source type="image/webp" srcset="../images/blog-article-2.webp">
               <source type="image/jp2" srcset="../images/blog-article-2.jp2">
-              <img class="img" src="../images/blog-article-2.png" alt="">
+              <img loading="lazy" class="img" src="../images/blog-article-2.png" alt="">
             </picture>
           </a>
 
@@ -1961,7 +1985,7 @@
             <picture>
               <source type="image/webp" srcset="../images/blog-article-3.webp">
               <source type="image/jp2" srcset="../images/blog-article-3.jp2">
-              <img class="img" src="../images/blog-article-3.png" alt="">
+              <img loading="lazy" class="img" src="../images/blog-article-3.png" alt="">
             </picture>
           </a>
 
@@ -1979,7 +2003,7 @@
             <picture>
               <source type="image/webp" srcset="../images/blog-article-4.webp">
               <source type="image/jp2" srcset="../images/blog-article-4.jp2">
-              <img class="img" src="../images/blog-article-4.png" alt="">
+              <img loading="lazy" class="img" src="../images/blog-article-4.png" alt="">
             </picture>
           </a>
 
@@ -1998,7 +2022,7 @@
             <picture>
               <source type="image/webp" srcset="../images/blog-article-5.webp">
               <source type="image/jp2" srcset="../images/blog-article-5.jp2">
-              <img class="img" src="../images/blog-article-5.png" alt="">
+              <img loading="lazy" class="img" src="../images/blog-article-5.png" alt="">
             </picture>
           </a>
 
@@ -2016,7 +2040,7 @@
             <picture>
               <source type="image/webp" srcset="../images/blog-article-1.webp">
               <source type="image/jp2" srcset="../images/blog-article-1.jp2">
-              <img class="img" src="../images/blog-article-1.png" alt="">
+              <img loading="lazy" class="img" src="../images/blog-article-1.png" alt="">
             </picture>
           </a>
 
@@ -2034,7 +2058,7 @@
             <picture>
               <source type="image/webp" srcset="../images/blog-article-2.webp">
               <source type="image/jp2" srcset="../images/blog-article-2.jp2">
-              <img class="img" src="../images/blog-article-2.png" alt="">
+              <img loading="lazy" class="img" src="../images/blog-article-2.png" alt="">
             </picture>
           </a>
 
@@ -2051,7 +2075,7 @@
             <picture>
               <source type="image/webp" srcset="../images/blog-article-3.webp">
               <source type="image/jp2" srcset="../images/blog-article-3.jp2">
-              <img class="img" src="../images/blog-article-3.png" alt="">
+              <img loading="lazy" class="img" src="../images/blog-article-3.png" alt="">
             </picture>
           </a>
 
@@ -2069,7 +2093,7 @@
             <picture>
               <source type="image/webp" srcset="../images/blog-article-4.webp">
               <source type="image/jp2" srcset="../images/blog-article-4.jp2">
-              <img class="img" src="../images/blog-article-4.png" alt="">
+              <img loading="lazy" class="img" src="../images/blog-article-4.png" alt="">
             </picture>
           </a>
 
@@ -2088,7 +2112,7 @@
             <picture>
               <source type="image/webp" srcset="../images/blog-article-5.webp">
               <source type="image/jp2" srcset="../images/blog-article-5.jp2">
-              <img class="img" src="../images/blog-article-5.png" alt="">
+              <img loading="lazy" class="img" src="../images/blog-article-5.png" alt="">
             </picture>
           </a>
 
@@ -2131,7 +2155,7 @@
             <picture>
               <source type="image/webp" srcset="../images/file-type-1.webp">
               <source type="image/jp2" srcset="../images/file-type-1.jp2">
-              <img class="img" src="../images/file-type-1.png" alt="">
+              <img loading="lazy" class="img" src="../images/file-type-1.png" alt="">
             </picture>
           </div>
           <span class="files__types-item-name">PDF</span>
@@ -2142,7 +2166,7 @@
             <picture>
               <source type="image/webp" srcset="../images/file-type-2.webp">
               <source type="image/jp2" srcset="../images/file-type-2.jp2">
-              <img class="img" src="../images/file-type-2.png" alt="">
+              <img loading="lazy" class="img" src="../images/file-type-2.png" alt="">
             </picture>
           </div>
 
@@ -2154,7 +2178,7 @@
             <picture>
               <source type="image/webp" srcset="../images/file-type-1.webp">
               <source type="image/jp2" srcset="../images/file-type-1.jp2">
-              <img class="img" src="../images/file-type-1.png" alt="">
+              <img loading="lazy" class="img" src="../images/file-type-1.png" alt="">
             </picture>
           </div>
 
@@ -2166,7 +2190,7 @@
             <picture>
               <source type="image/webp" srcset="../images/file-type-3.webp">
               <source type="image/jp2" srcset="../images/file-type-3.jp2">
-              <img class="img" src="../images/file-type-3.png" alt="">
+              <img loading="lazy" class="img" src="../images/file-type-3.png" alt="">
             </picture>
           </div>
 
@@ -2178,7 +2202,7 @@
             <picture>
               <source type="image/webp" srcset="../images/file-type-1.webp">
               <source type="image/jp2" srcset="../images/file-type-1.jp2">
-              <img class="img" src="../images/file-type-1.png" alt="">
+              <img loading="lazy" class="img" src="../images/file-type-1.png" alt="">
             </picture>
           </div>
 
@@ -2208,7 +2232,7 @@
             <picture>
               <source type="image/webp" srcset="../images/file-type-1.webp">
               <source type="image/jp2" srcset="../images/file-type-1.jp2">
-              <img class="img" src="../images/file-type-1.png" alt="">
+              <img loading="lazy" class="img" src="../images/file-type-1.png" alt="">
             </picture>
           </div>
 
@@ -2220,7 +2244,7 @@
             <picture>
               <source type="image/webp" srcset="../images/file-type-3.webp">
               <source type="image/jp2" srcset="../images/file-type-3.jp2">
-              <img class="img" src="../images/file-type-3.png" alt="">
+              <img loading="lazy" class="img" src="../images/file-type-3.png" alt="">
             </picture>
           </div>
 
@@ -2232,7 +2256,7 @@
             <picture>
               <source type="image/webp" srcset="../images/file-type-2.webp">
               <source type="image/jp2" srcset="../images/file-type-2.jp2">
-              <img class="img" src="../images/file-type-2.png" alt="">
+              <img loading="lazy" class="img" src="../images/file-type-2.png" alt="">
             </picture>
           </div>
 
@@ -2244,7 +2268,7 @@
             <picture>
               <source type="image/webp" srcset="../images/file-type-4.webp">
               <source type="image/jp2" srcset="../images/file-type-4.jp2">
-              <img class="img" src="../images/file-type-4.png" alt="">
+              <img loading="lazy" class="img" src="../images/file-type-4.png" alt="">
             </picture>
           </div>
 
@@ -2359,7 +2383,7 @@
         <picture>
           <source type="image/webp" srcset="../images/latest-it-news.webp">
           <source type="image/jp2" srcset="../images/latest-it-news.jp2">
-          <img class="img" src="../images/latest-it-news.png" alt="">
+          <img loading="lazy" class="img" src="../images/latest-it-news.png" alt="">
         </picture>
       </div>
 
@@ -2677,7 +2701,6 @@
   </footer>
 
   <script defer src="../js/script.min.js"></script>
-  <script src="lazysizes.min.js" async></script>
 </body>
 
 </html>

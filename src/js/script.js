@@ -289,16 +289,31 @@ let page = document.querySelector('.page');
 let themeButton = document.querySelector('.theme-switch-btn');
 let themeButtonDesktop = document.querySelector('.theme-switch-btn--desktop');
 
-themeButton.onclick = function() {
+themeButton.onclick = function(event) {
   page.classList.toggle('dark-theme');
   page.classList.toggle('light-theme');
+  event.preventDefault()
 };
 
-themeButtonDesktop.onclick = function() {
+themeButtonDesktop.onclick = function(event) {
   page.classList.toggle('dark-theme');
   page.classList.toggle('light-theme');
+  event.preventDefault();
 };
 
-// CLOSE MODAL WINDOW BY CLICKING OUTSIDE
+//MOBILE MENU ADD/REMOVE CONTAINER
+document.addEventListener("DOMContentLoaded", function(event) {
+  let headerBottomMobile = document.querySelector('.header-bottom-inner--mobile');
+  let headerBottomMobileNav = document.querySelector('.header-bottom__menu');
 
-
+  function resize() {
+    if (window.innerWidth < 992) {
+      headerBottomMobile.classList.remove('container');
+      headerBottomMobileNav.classList.remove('container');
+    } else {
+      headerBottomMobile.classList.add('container');
+      headerBottomMobileNav.classList.addd('container');
+    }
+  }
+  window.onresize = resize;
+});
