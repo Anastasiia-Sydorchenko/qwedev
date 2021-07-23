@@ -304,15 +304,12 @@ themeButtonDesktop.onclick = function(event) {
 //MOBILE MENU ADD/REMOVE CONTAINER
 document.addEventListener("DOMContentLoaded", function(event) {
   let headerBottomMobile = document.querySelector('.header-bottom-inner--mobile');
-  let headerBottomMobileNav = document.querySelector('.header-bottom__menu');
 
   function resize() {
     if (window.innerWidth < 992) {
       headerBottomMobile.classList.remove('container');
-      headerBottomMobileNav.classList.remove('container');
     } else {
       headerBottomMobile.classList.add('container');
-      headerBottomMobileNav.classList.add('container');
     }
   }
   window.onresize = resize;
