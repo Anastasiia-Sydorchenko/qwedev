@@ -312,7 +312,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
       headerBottomMobileNav.classList.remove('container');
     } else {
       headerBottomMobile.classList.add('container');
-      headerBottomMobileNav.classList.addd('container');
+      headerBottomMobileNav.classList.add('container');
     }
   }
   window.onresize = resize;
