@@ -46,6 +46,8 @@ function hideDropdowns () {
     }
   }
 
+  let dropdownButtons = document.getElementsByClassName("dropbtn");
+
   for (i = 0; i < dropdownButtons.length; i++) {
     let openDropdown = dropdownButtons[i];
     if (openDropdown.classList.contains('show-styles')) {
