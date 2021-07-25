@@ -176,25 +176,10 @@ let i;
 
 for (i = 0; i < faqQuestion.length; i++) {
   faqQuestion[i].addEventListener("click", function() {
-  this.classList.toggle("active");
-  var panel = this.nextElementSibling;
-  if (panel.style.maxHeight) {
-    panel.style.maxHeight = null;
-  } else {
-    panel.style.maxHeight = panel.scrollHeight + "px";
-  } 
+    this.querySelector('.it-news__answers-arrow').classList.toggle('it-news__answers-arrow--active');
+    this.nextElementSibling.style.display = this.nextElementSibling.style.display === "block" ? "none" : "block";
   });
 }
-
-// FAQ ACCORDION ARROW-BUTTON
-let faqQuestions = document.querySelectorAll('.it-news__answers-question');
-
-for (faqQuestion of faqQuestions) {
-  let arrowToDown = faqQuestion.querySelector('.it-news__answers-arrow');
-  faqQuestion.onclick = function () {
-    arrowToDown.classList.toggle('it-news__answers-arrow--active')
-  };
-};
 
 //BACK TO TOP BTN
 const scrollToTopButton = document.getElementById('footer__bottom-arrow-to-top');
@@ -224,9 +209,7 @@ scrollToTopButton.onclick = function(e) {
 };
 
 //TABS SHOW/HIDE CONTENT
-const hideBtn1 = document.querySelector('.latest-news__tabs-hide-btn1');
-const hideBtn2 = document.querySelector('.latest-news__tabs-hide-btn2');
-const hideBtn3 = document.querySelector('.latest-news__tabs-hide-btn3');
+const hideBtn1 = document.querySelector('.latest-news__tabs-hide-btn');
 
 const showMoreBtn1 = document.querySelector('.latest-news__show-more-btn1');
 const showMoreBtn2 = document.querySelector('.latest-news__show-more-btn2');
@@ -236,51 +219,33 @@ const extraListItems1 = document.querySelector('.latest-news__list-items--extra1
 const extraListItems2 = document.querySelector('.latest-news__list-items--extra2');
 const extraListItems3 = document.querySelector('.latest-news__list-items--extra3');
 
-function toggleExtraListItems1() {
-  hideBtn1.classList.toggle('show');
-  extraListItems1.classList.toggle('show');
-  showMoreBtn1.classList.toggle('show');
-}
-
 showMoreBtn1.onclick = function(e) {
-  toggleExtraListItems1();
+  extraListItems1.classList.add('show');
+  showMoreBtn1.classList.remove('show');
   e.preventDefault();
 };
 
 hideBtn1.onclick = function(e) {
-  toggleExtraListItems1();
+  extraListItems1.classList.remove('show');
+  showMoreBtn1.classList.add('show');
+
+  extraListItems2.classList.remove('show');
+  showMoreBtn2.classList.add('show');
+
+  extraListItems3.classList.remove('show');
+  showMoreBtn3.classList.add('show');
   e.preventDefault();
 };
-
-function toggleExtraListItems2() {
-  hideBtn2.classList.toggle('show');
-  extraListItems2.classList.toggle('show');
-  showMoreBtn2.classList.toggle('show');
-}
 
 showMoreBtn2.onclick = function(e) {
-  toggleExtraListItems2();
+  extraListItems2.classList.add('show');
+  showMoreBtn2.classList.remove('show');
   e.preventDefault();
 };
-
-hideBtn2.onclick = function(e) {
-  toggleExtraListItems2();
-  e.preventDefault();
-};
-
-function toggleExtraListItems3() {
-  hideBtn3.classList.toggle('show');
-  extraListItems3.classList.toggle('show');
-  showMoreBtn3.classList.toggle('show');
-}
 
 showMoreBtn3.onclick = function(e) {
-  toggleExtraListItems3();
-  e.preventDefault();
-};
-
-hideBtn3.onclick = function(e) {
-  toggleExtraListItems3();
+  extraListItems3.classList.add('show');
+  showMoreBtn3.classList.remove('show');
   e.preventDefault();
 };
 

@@ -292,7 +292,6 @@
   color: $tabs-color
   background-color: transparent
   cursor: pointer
-  display: none
 
 .latest-news__tabs
   margin-left: 10px
@@ -518,6 +517,12 @@
   width: 100%
   height: 160px
   flex-shrink: 0
+
+.videos__top-video-wrapper:hover .play-circle,
+.videos__block-item-wrapper:hover .play-circle
+  width: 128px
+  height: 128px
+  transition: .3s
 
 .play-circle
   position: absolute
@@ -1010,12 +1015,10 @@
     display: none
 
   .top-news
-    display: flex
-    justify-content: space-between
+    display: grid
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 20px;
     margin-bottom: 50px
-
-  .top-news-item
-    width: 230px
 
   .top-news__img-wrapper
     display: block
@@ -1239,22 +1242,19 @@
     margin-bottom: 80px
 
   .news-with-pagination__news-block
-    display: flex
-    flex-wrap: wrap
-    justify-content: space-between
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+    grid-row-gap: 24px
+    grid-column-gap: 20px 
     margin-bottom: 30px
 
   .news-with-pagination__news-item
     position: relative
-    width: 400px
-    margin-bottom: 25px
-    height: 430px
+    padding-bottom: 40px
 
   .news-with-pagination__img-wrapper
     display: block
     position: relative
-    width: 400px
-    height: 230px
 
   .news-with-pagination__img-wrapper-gradient
     position: absolute
@@ -1289,7 +1289,6 @@
   .news-with-pagination__stats
     position: absolute
     bottom: 0
-    margin: 0
 
   .news-with-pagination__pagination-block
     display: flex
@@ -1363,14 +1362,12 @@
     @include text-hover-underline
 
   .news-category__items
-    display: flex
-    justify-content: space-between
+    display: grid
+    grid-template-columns: repeat(4, 1fr)
+    grid-column-gap: 20px
     padding-top: 15px
     margin-bottom: 35px
     @include border-top-light
-
-  .news-category__item
-    width: 230px
 
   .news-category__item-title
     @include text-hover-underline
@@ -1395,16 +1392,10 @@
     border-top: 5px solid $videos-section-border-color
 
   .videos__block
-    display: flex
-    flex-direction: column
-    justify-content: space-between
-
-  .videos__block-item
-    width: 300px
-
-  .videos__block
-    flex-direction: row
-    flex-wrap: wrap
+    display: grid
+    grid-template-columns: repeat(4, 1fr)
+    grid-column-gap: 13px
+    grid-row-gap: 15px
 
   .videos__top-category
     position: initial
@@ -1568,6 +1559,7 @@
 
   .it-news__answers
     margin-left: 40px
+    width: 100%
 
   .it-news__answers-accordion
     width: 100%
@@ -1590,14 +1582,14 @@
     align-items: center
     line-height: 1.4
     font-weight: 700
+    cursor: pointer
 
   .it-news__answers-arrow--active
     transform: rotate(180deg)
 
   .it-news__answers-answer
-    max-height: 0
-    overflow: hidden
-    transition: max-height 0.2s ease-out
+    display: none
+    width: 100%
 
   .it-news__answers-answer-text
     padding: 30px
@@ -1687,22 +1679,8 @@
   .top-img-wrapper
     width: 650px
 
-  .top-news-item
-    width: 270px
-
   .discuss-news__user-name
     display: block
-
-  .news-with-pagination__news-item
-    width: 350px
-    height: 400px
-
-  .news-with-pagination__img-wrapper
-    width: 100%
-    height: auto
-
-  .news-category__item
-    width: 275px
 
 @media (min-width: 1300px)
   .container
@@ -1712,17 +1690,8 @@
     width: 800px
     height: 400px
 
-  .top-news-item
-    width: 295px
-
   .top-news__img-wrapper
     height: 160px
-
-  .news-category__item
-    width: 295px
-
-  .news-with-pagination__news-item
-    width: 400px
 
   .top-news
     margin-bottom: 30px
